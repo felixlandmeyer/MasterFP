@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[1] Config.pm:307> INFO - Logfile is 'Protokoll.blg'
+[39] biber:315> INFO - === Do Nov 21, 2019, 00:21:38
+[64] Biber.pm:371> INFO - Reading 'Protokoll.bcf'
+[143] Biber.pm:889> INFO - Found 5 citekeys in bib section 0
+[161] Biber.pm:4093> INFO - Processing section 0
+[174] Biber.pm:4254> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[175] bibtex.pm:1523> INFO - LaTeX decoding ...
+[181] bibtex.pm:1340> INFO - Found BibTeX data source 'lit.bib'
+[203] Utils.pm:193> WARN - I didn't find a database entry for 'Eu_Emission' (section 0)
+[218] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[219] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[219] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[219] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
+[228] bbl.pm:636> INFO - Writing 'Protokoll.bbl' with encoding 'UTF-8'
+[230] bbl.pm:739> INFO - Output to Protokoll.bbl
+[231] Biber.pm:110> INFO - WARNINGS: 1

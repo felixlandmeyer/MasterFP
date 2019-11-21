@@ -1,0 +1,84 @@
+\documentclass[captions=tableheading,
+  bibliography=totoc,
+  titlepage=firstiscover
+  ]{scrartcl}
+\usepackage{scrhack}
+\usepackage[a4paper,top=2.5cm,left=2.5cm,right=2cm,bottom=3cm,bindingoffset=5mm]{geometry}
+\usepackage[aux]{rerunfilecheck}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xfrac}
+\usepackage{mathtools}
+\usepackage{fontspec}
+\usepackage[natbib=true,style=numeric,sorting=none]{biblatex}
+\usepackage{stmaryrd}
+\addbibresource{lit.bib}
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+\setlength{\parindent}{0cm}
+\usepackage[
+  locale=DE,
+  separate-uncertainty=true,
+  per-mode=symbol-or-fraction,
+]{siunitx}
+
+\usepackage[section, below]{placeins}
+\usepackage[
+  labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+  font=small,          % Schrift etwas kleiner als Dokument
+%  width=0.9\textwidth, % maximale Breite einer Caption schmaler
+  format=plain,
+  indention=1em, % Abbildung sticht links etwas hervor
+]{caption}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{grffile}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+\usepackage{microtype}
+\usepackage{pdfpages}
+\usepackage{mhchem}
+\usepackage{dsfont}
+\begin{document}
+\begin{titlepage}
+  \centering
+  %\includegraphics[width=0.5\textwidth]{../Logo.pdf}\par\vspace{2cm}
+  {\scshape\LARGE Technische Universität Dortmund \par}
+  \vspace{1.5cm}
+  {\scshape\Large Fortgeschrittenen Praktikum \par}
+  \vspace{1.5cm}
+  {\scshape\LARGE\bfseries Germanium Detektor\par}
+  \vspace{2.5cm}
+  {\Large Melina Helfrich, \texorpdfstring{\href{mailto:melina.helfrich@tu-dortmund.de}{melina.helfrich@tu-dortmund.de}}\par\par
+  \par\vspace{0.25cm}
+  Felix Landmeyer, \texorpdfstring{\href{mailto:felix.landmeyer@tu-dortmund.de}{felix.landmeyer@tu-dortmund.de}}\par\par}
+  \vspace{2cm}
+  {\scshape Durchführung am 04.11.2019 \par
+    Abgabe am ..2019 \par
+    %Korrekturabgabe am ..2019
+    }
+\end{titlepage}
+\newpage
+\tableofcontents
+%\newpage
+\setcounter{page}{3}
+%\input{Theorie.tex}
+%\newpage
+\input{Auswertung.tex}
+%\newpage
+%\input{Diskussion}
+%\newpage
+%\printbibliography
+\end{document}
