@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 
 Messwerte = np.array([
-
 0.001,1.58,
 0.01,1.55,
 0.03,1.53,
