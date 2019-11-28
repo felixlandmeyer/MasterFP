@@ -1,0 +1,138 @@
+\documentclass[bibliography=totoc]{scrartcl}
+\usepackage{diagbox}
+\usepackage{scrhack}
+\usepackage[a4paper,top=2.5cm,right=2.5cm,left=2cm,bottom=3cm,bindingoffset=5mm]{geometry}
+\usepackage[aux]{rerunfilecheck}
+\usepackage{fontspec}
+% \setmainfont{Cambria}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{biblatex}
+\addbibresource{lit.bib}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+
+\usepackage[
+  locale=DE,
+  separate-uncertainty=true,
+  per-mode=symbol-or-fraction,
+]{siunitx}
+\sisetup{exponent-product = \cdot, output-decimal-marker = {,}, per-mode = fraction}
+%\usepackage[section]{placeins}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{xcolor}
+\definecolor{tugrun}{RGB}{133,184,21}
+\usepackage{sectsty}
+\chapterfont{\color{tugrun}}
+\sectionfont{\color{tugrun}}
+\subsectionfont{\color{tugrun}}
+\subsubsectionfont{\color{tugrun}}
+\usepackage{tocloft}
+\renewcommand\cftsecfont{\color{tugrun}}
+\renewcommand{\cfttoctitlefont}{\color{tugrun}\Large\bfseries}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{}
+\usepackage{etoolbox}
+\patchcmd{\headrule}{\hrule}{\color{tugrun}\hrule}{}{}
+% \lhead{Versuch B14: Tomographie mittels $\gamma$-Strahlung}
+\lhead{\rightmark}
+\rhead{\texorpdfstring{\href{mailto:felix.landmeyer@tu-dortmund.de}{Felix Landmeyer} \\
+\texorpdfstring{\href{mailto:melina.helfrich@tu-dortmund.de}{Melina Helfrich}}}}
+\renewcommand{\headrulewidth}{2pt}
+
+
+% \usepackage[headsepline,automark]{scrlayer-scrpage}
+% \clearpairofpagestyles
+% \ihead{\rightmark}
+% \ofoot{\pagemark}
+% \addtokomafont{pageheadfoot}{}
+%
+% \KOMAoptions{onpsinit=\setstretch{1}}
+% \renewcommand*\chaptermarkformat{}
+% \renewcommand*\chapterpagestyle{scrheadings}
+
+
+
+\restylefloat{table}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{t}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+\usepackage[
+version=4,
+math-greek=default,
+text-greek=default,
+arrows=pgf,
+]{mhchem}
+
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage[section]{placeins}
+\usepackage{caption}
+\usepackage{eso-pic}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{microtype}
+\usepackage{xfrac}
+\usepackage{wrapfig}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{icomma}
+\setkomafont{captionlabel}{\normalsize\bfseries}
+\setkomafont{sectioning}{\bfseries}
+\setlength\parindent{0pt}
+\usepackage{cancel}
+\begin{document}
+\begin{titlepage}
+  \centering
+  \includegraphics[width=0.5\textwidth]{Logo.jpg}\par\vspace{2cm}
+  {\scshape\LARGE Technische Universität Dortmund \par}
+  \vspace{1.5cm}
+  {\scshape\Large Fortgeschrittenen Praktikum \par}
+  \vspace{1.5cm}
+  {\scshape\LARGE\bfseries Messung von Diffusionskonstanten mittels gepulster Kernspinresonanz\par}
+  \vspace{2.5cm}
+  {\Large Melina Helfrich, \texorpdfstring{\href{mailto:melina.helfrich@tu-dortmund.de}{melina.helfrich@tu-dortmund.de}}\par\par
+  \par\vspace{0.25cm}
+  Felix Landmeyer, \texorpdfstring{\href{mailto:felix.landmeyer@tu-dortmund.de}{felix.landmeyer@tu-dortmund.de}}\par\par}
+  \vspace{2cm}
+  {\scshape Durchführung am 25.11.2019 \par
+    Abgabe am .2019 \par
+    %Korrekturabgabe am ..2019
+    }
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+\setcounter{page}{3}
+%\input{Theorie.tex}
+%\newpage
+\input{Auswertung.tex}
+%\newpage
+%\input{Diskussion}
+\newpage
+\printbibliography
+\end{document}
