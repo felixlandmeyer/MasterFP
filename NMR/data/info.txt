@@ -1,5 +1,5 @@
 scope 81,82: Diffusionsmessung bei tau = 0.005s
-scope 78,79,80: Diffusionsmessung bei tau = 0.0155 
+scope 78,79,80: Diffusionsmessung bei tau = 0.0155
 scope 77: T2 Messung N =1
 scope 76: T2 Messung mit MG off
 scope 75: " " " MG on
@@ -7,8 +7,9 @@ scope 72-74 T1 Messung
 
 phase  = 30 grad
 f = 21.72088 MHz
+Raumtemperatur 21.5 grad Celsius
 
 xgrad = -1.7
 y = -5.1
 z = 3.7
-z^2 = -2.4 
+z^2 = -2.4
