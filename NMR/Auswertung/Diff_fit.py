@@ -5,7 +5,7 @@ import matplotlib as mpl
 
 
 def theory(tau, M0, M1, T):
-    T2=1530
+    T2=560
     return M0 * np.exp(-2 * tau / T2) * np.exp(-tau**3 / T) + M1
 
 tau, U = np.genfromtxt('../data/Diffusion.txt', unpack=True)

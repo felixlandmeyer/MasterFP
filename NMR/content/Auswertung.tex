@@ -73,12 +73,11 @@ noch im Rahmen.
 \subsection{$T_2$-Messung}
 Im ersten Versuchsteil zur Bestimmung der $T_2$-Zeit wird der \textit{MG}-Schalter auf \textit{on} gestellt. Somit 
 wird hier die Meiboom-Gill-Methode angewendet.
-In Abbildung \ref(fig:t2) ist das aufgenommene Signal dargestellt. Es ist gut zu erkennen, dass das Signal bei 
-dem eingestellten Pulsabstand von $\tau=\SI{1}{\second}$ HIER FEHLT DER ECHTE WERT den gewünschten Verlauf zeigt.
+In Abbildung \ref(fig:t2) ist das aufgenommene Signal dargestellt. Es ist gut zu erkennen, den gewünschten Verlauf zeigt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{../data/T2.png}
-  \caption{Das aufgenommene Signal zeigt bei der Meiboom-Gill-Methode mit $\tau=\SI{1}{\second}$ HIER FEHLT MIR EIN WERT den gewünschten Verlauf. Die Signalstärke ist nach dem
+  \caption{Das aufgenommene Signal zeigt bei der Meiboom-Gill-Methode den gewünschten Verlauf. Die Signalstärke ist nach dem
   100.Maximum auf ca. $\frac{1}{3}$ der Maximalhöhe abgefallen.}
   \label{fig:t2}
 \end{figure} \noindent
@@ -91,17 +90,18 @@ dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{../Auswertung/T2_fit.pdf}
-  \caption{Die zur Bestimmung der $T_2$-Zeit durchgeführte Ausgleichsrechnung. In Blau ist die Ausgleichskurve zu erkennen,
-  die an die Einhüllende des oszillierenden Signals angepasst wird.}
+  \caption{Die zur Bestimmung der $T_2$-Zeit durchgeführte Ausgleichsrechnung. In Rot ist die Ausgleichskurve zu erkennen,
+  die an die Einhüllende (\textcolor{dodgerblue}{blau}) des oszillierenden Signals (\textcolor{gray}{grau}) angepasst wird.}
   \label{fig:T2_fit}
 \end{figure} \noindent
 Die Regression liefert
+\textcolor{red}{DIESE WERTE SIND KACKE}
 \begin{align}
-  M_0 &=  \SI{0.99(001)}{\volt} \\
-  M_1 &=  \SI{0.067(002)}{\volt} \\
-  T_2 &=  \SI{1.53(004)}{\volt}
+  %M_0 &=  \SI{4791977.76(352863663)}{\milli\volt} \\
+  %M_1 &=  \SI{188.18(5080)}{\milli\volt} \\
+  T_2 &=  \SI{0.56(005)}{\second}
 \end{align}
-für die gesuchten Parameter. \\
+für die gesuchte Spin-Spin-Realaxationszeit $T_2$. \\
 Im Vergleich dazu ist in Abbidung \ref{fig:t2_off} das aufgenommene Signal für die Carr-Purcell-Methode zu sehen. Das heißt bei der 
 Messung ist der \textit{MG}-Schalter auf \textit{off} gestellt.
 \begin{figure}[H]
@@ -146,9 +146,9 @@ die zuvor bestimmte $T_2$-Zeit verwendet.
 \end{figure} \noindent
 Die Regression liefert
 \begin{align}
-  M_0 &= \SI{1.39(002)}{\volt} \\
+  M_0 &= \SI{1.41(002)}{\volt} \\
   M_1 &= \SI{0.14(002)}{\volt} \\
-  T_D &= \SI{5.33(025)e-6}{\second}
+  T_D &= \SI{5.57(025)e-6}{\second}
 \end{align}
 für die gesuchten Parameter.
 Mithilfe des Zusammenhangs
@@ -157,15 +157,27 @@ Mithilfe des Zusammenhangs
 \label{eqn:D}
 \end{equation}
 kann die Diffusionskonstante bestimmt werden. Dabei beschreibt G den Gradienten, der mittels Fouriertransformation eines Echos
-bestimmt wird. In Abbildung \ref{fig:echo} ist das verwendete Echo dargestellt. Wobei sowohl der Imaginär- als auch der Realteil
-zu sehen sind. Dieses Echo ist bereits phasenkorrigiert, daran zu erkennen, dass der Imaginärteil zu Beginn nicht verhanden ist.
+bestimmt wird. In Abbildung \ref{fig:echo_vorher} ist das verwendete Echo bei einem Pulsabstand von $\tau = \SI{0.0155}{\second}$ dargestellt. Wobei sowohl der Imaginär- als auch der Realteil
+zu sehen sind.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{../Auswertung/echo.pdf}
-  \caption{Das zur Berechnung des Gradienten verwendete Echo nach einer Phasenkorrektur.}
-  \label{fig:echo}
+  \includegraphics[width=0.9\textwidth]{../Auswertung/echo_vorher.pdf}
+  \caption{Das zur Berechnung des Gradienten verwendete Echo bei einem Pulsabstand von $\tau = \SI{0.0155}{\second}$ 
+  vor dem Abschneiden am Maximum und der durchgeführten 
+  Phasenkorrektur. In (\textcolor{indianred}{rot}) ist der Real- und in (\textcolor{dodgerblue}{blau}) der Imaginärteil des Signals dargestellt.}
+  \label{fig:echo_vorher}
 \end{figure} \noindent
-In Abbildung \ref{fig:ft} ist das zu Abbildung \ref{fig:echo} gehörige Frequenzspektrum abgebildet, das mithilde der 
+Bevor eine Fouriertransformation durchgeführt werden kann, müssen die Messwerte des Signals so dargestellt werden, dass sie 
+beim Maximum des Realteils des Signals starten. Diese veränderte Darstellung des Signals ist zur Verdeutlichung des Vorgehens in 
+Abbildung \ref{fig:echo_ab} visualisiert.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\textwidth]{../Auswertung/echo_abgeschnitten.pdf}
+  \caption{Das zur Fouriertrasnformation vorbereitete Signal. Zu sehen sind sowohl der Realteil (\textcolor{indianred}{rot}) als auch der 
+  Imagainärteil (\textcolor{dodgerblue}{blau}) des Signals, beginnend beim Maximum des gemessenen Realteils.}
+  \label{fig:echo_ab}
+\end{figure} \noindent
+In Abbildung \ref{fig:ft} ist das zu Abbildung \ref{fig:echo_ab} gehörige Frequenzspektrum abgebildet, das mithilde der 
 Fouriertransformation bestimmt wird. Dieses Spektrum gibt die Verteilung der Larmorfrequenzen innerhalb der Protonen wieder.
 Aufgrund des geschalteten Gradienten unterscheidet diese sich abhängig vom Ort der Protons.
 \begin{figure}[H]
@@ -175,21 +187,50 @@ Aufgrund des geschalteten Gradienten unterscheidet diese sich abhängig vom Ort 
   ist es möglich den Gradienten und darüber die Diffusionskonstante zu berechnen.}
   \label{fig:ft}
 \end{figure} \noindent
-Mithilfe der Frequenzbreite, die in Abbildung \ref{fig:ft} zu 
+Die Frequenzbreite wird zwischen den beiden rot dargestellten Messwerten zu
 \begin{align}
-  d_f = \SI{1}{\kilo\hertz}
+  d_f = \SI{22.43}{\kilo\hertz}
 \end{align}
-bestimmt wird, ist es über den Zusammenhang
+bestimmt.
+Damit ist es über den Zusammenhang
 \begin{align}
-  G = \frac{s\pi d_f}{\gamma d}
+  G = \frac{2\pi d_f}{\gamma d}
 \end{align}
 möglich den vorliegenden Gradienten zu
 \begin{align}
-  G = \SI{1}{\tesla\per\meter}
+  G = \SI{0.125}{\tesla\per\meter}
 \end{align}
 zu bestimmen. Dabei wird mit $d = \SI{4.2}{\milli\meter}$ der Durchmesser des Probenröhrchens verwendet.
 Mit dem bestimmten Grradienten und Gleichung \ref{eqn:D} kann die Diffusionskonstante zu 
 \begin{align}
-  D = \SI{1(01)}{\square\meter\per\second}
+  D = \SI{2.41(011)e-10}{\square\meter\per\second}
 \end{align}
 bestimmt werden.
+Daraus ergibt sich mit einer Viskosität von $\eta \approx \SI{2.95}{\milli\pascal\second}$ \cite{viso} und einer 
+Temperatur von ca. $\SI{21.5}{\degree\celsius}$
+mithilfe von Formel \ref{eqn:stokes} 
+\begin{align}
+  r = \SI{3.04(014)}{\angstrom}
+\end{align}
+für den Molekülradius des verwendeteten 1-Butanol. \\
+Zum Vergleich wird der Molekülradius mithilfe des Molekulargewichtes und der Dichte berechnet werden. Dabei wird die Annahme getroffen, 
+dass die Moleküle in der vorliegenden Flüssigkeit eine hexagonal dichteste Kugelpackung bilden.
+Da die Packungsdichte einer hexagonal dichtesten Kugelpackung mit 
+\begin{align}
+  \frac{\pi}{3\sqrt{2}} \approx \SI{74}{\percent}
+\end{align}
+bekannt ist, ergibt sich für die Dichte
+\begin{align}
+  \rho &= \frac{m_\text{ges}}{V_\text{ges}} \\
+       &= \frac{\pi m_\text{But}}{3\sqrt{2}V_\text{But}}.
+\end{align}
+Unter der Annahme, dass die 1-Butanol-Moleküle kugelförmig sind und somit 
+\begin{align}
+  V_\text{But} = \frac{4}{3} \pi r^3
+\end{align}
+für ihr Volumen gilt, ergibt sich für den gesuchten Molekülradius
+\begin{align}
+  r = \sqrt[3]{\frac{m_\text{But}}{4\sqrt{2}\rho}} \approx \SI{2.99}{\angstrom} .
+\end{align}
+Dabei wird $m_\text{But}$ mithilfe einer Molaren Masse von $\SI{74.12}{\gram\per\mole}$ berechnet. 
+Die Dichte von 1-Butanol beträgt bei Raumtemperatur ca.$\SI{0.81}{gram\per\cubic\meter}$ \cite{dichte}.
