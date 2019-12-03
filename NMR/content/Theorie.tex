@@ -71,13 +71,27 @@ Dies erzeugt in dem Spule ein exponentiell abfallendes Spannungssignal, welches 
 
 \subsubsection{Spin-Gitter Wechselwirkung, T1 Zeit}
 
-Durch Wechselwirkung der Protonen mit umliegenden Molekülen können jene, durch Abgabe von Energiequanten $\Delat E = \hbar \omega_0$, in den Grundzustand zurückfallen.
+Durch Wechselwirkung der Protonen mit umliegenden Molekülen können jene, durch Abgabe von Energiequanten $\Delta E = \hbar \omega_0$, in den Grundzustand zurückfallen.
 Dies ist ein statistischer Prozess, der stark von dem untersuchten Material abhängt.
 Die Gesamtmagnetisierung in z-Richtung baut sich mit der Zeitkonstanten T1 mit
 \begin{equation}
-  M_\text{z} = M_\text{z,0} (1-e^{\frac{-t}{T1}})
+  M_\text{z} = M_\text{z0} (1-e^{\frac{-t}{T1}})
+  \label{eqn:T1Zeit}
 \end{equation}
-auf. Dabei beschreibt $M_\text{z,0}$ die Gesamtmagnetisierung vor dem schalten des B$_1$-Feldes.
+auf. Dabei beschreibt $M_\text{z,0}$ die Gesamtmagnetisierung vor dem Schalten des B$_1$-Feldes.
+
+\subsubsection{Spin-Spin Wechselwirkung, T2-Zeit}
+
+Das Magnetische Feld wird durch die Anwesenheit von anderen Spins lokal gestört und es herrscht eine andere Lamorfrequenz.
+Dadurch dephasieren die Spins und die Quermagnetisierung nimmt mit
+\begin{equation}
+  M_\text{x,y} = M_\text{x0,y0} \cdot e^{\frac{t}{-T2}}
+  \label{eqn:T2Zeit}
+\end{equation}
+ab.
+
+
+
 
 
 
