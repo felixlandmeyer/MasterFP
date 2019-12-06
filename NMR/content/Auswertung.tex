@@ -9,28 +9,28 @@ auf \SI{21.5}{\degreeCelsius} bestimmt. Nach dem Einstellen der in der Versuchsa
 werden diese solange variiert bis die gewünschten Signale zu sehen sind.
 Die richtige Frequenz ist daran zu erkennen, dass das gemessene Signal keine Schwingungen mehr aufweist. Ist die richtige Frequenz
 eingestellt und es wird die Phase variiert ist es das Ziel, dass sich das gesamte Signal ausschließlich im Realteil befindet.
-Das bedeutet es wird versucht die Phase so verändern, dass eines der beiden angezeigten Signale möglichst verschwindet.
-Beim Eintsellen der Gradienten ist darauf zu achten, dass das Signal möglichst lange zu erkennen ist. 
+Das bedeutet es wird versucht die Phase so zu verändern, dass eines der beiden angezeigten Signale möglichst verschwindet.
+Beim Einstellen der Gradienten ist darauf zu achten, dass das Signal möglichst lange zu erkennen ist. 
 Unter Berücksichtigung dieser Vorgehensweisen ergeben sich
 \begin{align}
   \text{Frequenz}&=\SI{221.72088}{\mega\hertz} \\
   \text{Phase} &= \SI{30}{\degree} \\
-    x&=–1.7 \\
-    y&=–5.1 \\
-    z&=3.7 \\
-    z^2 &=–2.4
+    x&=–1,7 \\
+    y&=–5,1 \\
+    z&=3,7 \\
+    z^2 &=–2,4
 \end{align} \noindent
 für die einzustellenden Werte. \\
-Die Bestimmung der Pulslängen für den $\SI{90}{\degree}$- und $\SI{180}{\degree}$-Puls ergeben
+Die Bestimmung der Pulslängen für den $\SI{90}{\degree}$- und $\SI{180}{\degree}$-Puls ergibt
 \begin{align}
   \SI{180}{\degree} &= \SI{5.04}{\micro\second}\\
-  \SI{90}{\degree}  &= \SI{2.52}{\micro\second}
+  \SI{90}{\degree}  &= \SI{2.52}{\micro\second}.
 \end{align} \noindent
 
 \subsection{$T_1$-Messung}
 Zur Bestimmung der $T_1$-Zeit wird die Magnetisierung für verschiedene Pulsabstände $\tau$ bestimmt. 
 Eine solche Messung ist beispielhaft in Abbildung \ref{fig:t1} dargestellt. Deutlich wird, dass eine vollständige Unterdrückung
-der Imaginärteils, dargstellt durch den grünen Graphen, nicht gelungen ist. Außerdem sind zwei Ausschläge zu erkennen, wobei der 
+der Imaginärteils, dargestellt durch den grünen Graphen, nicht gelungen ist. Außerdem sind zwei Ausschläge zu erkennen, wobei der 
 erste dem $\SI{180}{\degree}$-Puls zuzuordnen ist und der zweite dem $\SI{90}{\degree}$-Puls, der in diesem 
 Versuchsteil untersucht werden soll.
 \begin{figure}[H]
@@ -38,16 +38,17 @@ Versuchsteil untersucht werden soll.
   \includegraphics[width=0.8\textwidth]{../data/T1.png}
   \caption{Beispielhafte Darstellung einer Messung zur Bestimmung der T1-Relaxationszeit. Untersucht wird der zweite zu 
   erkennende Ausschlag, da er dem $\SI{90}{\degree}$-Puls zugeordnet ist. Beachtet wird dabei nur der Realteil des Signals, 
-  der durch den orangenen Graphen repräsentiert wird.}
+  der durch den \textcolor{orange}{orangen} Graphen repräsentiert wird.}
   \label{fig:t1}
 \end{figure} \noindent
 Die bei der Messung mithilfe der Cursorfunktion bestimmten Signalstärken sind in Abbildung \ref{fig:t1_fit} gegen den
-jeweiligen Pulsabstand $\tau$ aufgetragen. 
+jeweiligen Pulsabstand $\tau$ zusammen mit einer Ausgleichskurve aufgetragen. 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{../Auswertung/t1_fit.pdf}
   \caption{Die aufgenommen Messwerte der Signalstärke in Abhängigkeit der Pulslänge $\tau$, sowie die 
-  zur Bestimmung der $T_1$-Zeit durchgeführte Ausgleichskurve.}
+  zur Bestimmung der $T_1$-Zeit durchgeführte Ausgleichskurve. Für die x-Achse wird eine 
+  logarithmische Achse verwendet.}
   \label{fig:t1_fit}
 \end{figure}
 Durch die aufgenommenen Messwerte wird ein Ausgleichgraph der Form
@@ -61,7 +62,7 @@ gelegt. Diese Regression liefert
   M_1 &= \SI{-1.40(005)}{\volt}
 \end{align} \noindent
 für die Relaxationszeit $T_1$, sowie die Magnetisierungsparameter $M_0$ und $M_1$.
-Idealerweise stehen die Parameter $M_0$ und $M_1$ im Zusammenhang von $M_0 = -2M_1$. Bei den durch die Regession bestimmten
+Idealerweise stehen die Parameter $M_0$ und $M_1$ im Zusammenhang von $M_0 = -2M_1$ \cite{anleitung}. Bei den durch die Regession bestimmten
 Werten ergibt sich ein Verhätnis von
 \begin{equation}
   \frac{M_0}{M_1} = 2.22.
@@ -71,26 +72,29 @@ sich zum Einen auch schon daran erkennen, dass sowohl Real- als auch Imaginärte
 noch im Rahmen.
 
 \subsection{$T_2$-Messung}
-Im ersten Versuchsteil zur Bestimmung der $T_2$-Zeit wird der \textit{MG}-Schalter auf \textit{on} gestellt. Somit 
+Im ersten Versuchsteil zur Bestimmung der $T_2$-Zeit wird der MG-Schalter auf \textit{on} gestellt. Somit 
 wird hier die Meiboom-Gill-Methode angewendet.
-In Abbildung \ref(fig:t2) ist das aufgenommene Signal dargestellt. Es ist gut zu erkennen, den gewünschten Verlauf zeigt.
+In Abbildung \ref{fig:t2} ist das aufgenommene Signal dargestellt. Es ist gut zu erkennen, das es den gewünschten Verlauf zeigt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{../data/T2.png}
   \caption{Das aufgenommene Signal zeigt bei der Meiboom-Gill-Methode den gewünschten Verlauf. Die Signalstärke ist nach dem
-  100.Maximum auf ca. $\frac{1}{3}$ der Maximalhöhe abgefallen.}
+  100.Maximum auf ca. $\frac{1}{3}$ der Maximalhöhe abgefallen. In \textcolor{orange}{orange} ist der untersuchte 
+  Realteil des Signals zu sehen}
   \label{fig:t2}
 \end{figure} \noindent
 Zur Bestimmung der Relaxationszeit $T_2$, wird eine Ausgleichskurve der Form
 \begin{equation}
   M(t) = M_0 \cdot \exp(–t/T_2) + M_1
 \end{equation}
-an die Einhüllende des oszilliereden Signals angepasst. Diese ist zusammen mit den Messwerten in Abbildung \ref{fig:T2_fit}
+an die Einhüllende des oszilliereden Signals angepasst.
+Dazu werdend die Maxima der Werte bestimmt und diese zur Berechnung des Ausgleichsgraphen verwendet.
+Diese ist zusammen mit den Messwerten in Abbildung \ref{fig:T2_fit}
 dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.9\textwidth]{../Auswertung/T2_fit.pdf}
-  \caption{Die zur Bestimmung der $T_2$-Zeit durchgeführte Ausgleichsrechnung. In Rot ist die Ausgleichskurve zu erkennen,
+  \caption{Die zur Bestimmung der $T_2$-Zeit durchgeführte Ausgleichsrechnung. In \textcolor{indianred}{rot} ist die Ausgleichskurve zu erkennen,
   die an die Einhüllende (\textcolor{dodgerblue}{blau}) des oszillierenden Signals (\textcolor{gray}{grau}) angepasst wird.}
   \label{fig:T2_fit}
 \end{figure} \noindent
@@ -101,13 +105,13 @@ Die Regression liefert
   T_2 &=  \SI{0.56(005)}{\second}
 \end{align}
 für die gesuchte Spin-Spin-Realaxationszeit $T_2$. \\
-Im Vergleich dazu ist in Abbidung \ref{fig:t2_off} das aufgenommene Signal für die Carr-Purcell-Methode zu sehen. Das heißt bei der 
-Messung ist der \textit{MG}-Schalter auf \textit{off} gestellt.
+Im Vergleich dazu ist in Abbidung \ref{fig:t2_off} das aufgenommene Signal für die Carr-Purcell-Methode zu sehen. Das heißt bei diesem 
+Messteil ist der MG-Schalter auf \textit{off} gestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{../data/scope_76.png}
-  \caption{Das aufgenommene Signal für die Carr-Purcell-Methode. Dabei ist deutlich zu erkennen, dass es durch die 
-  $\SI{180}{\degree}$-Pulsen zum Wechsel zwischen Maxima im positiven und negativen Bereich kommt.}
+  \caption{Das aufgenommene Signal für die Carr-Purcell-Methode. Dabei ist deutlich zu erkennen, dass es durch die angelegten
+  $\SI{180}{\degree}$-Pulse zum Wechsel zwischen Maxima im positiven und negativen Bereich kommt.}
   \label{fig:t2_off}
 \end{figure} \noindent
 Es wird deutlich, dass im Gegensatz zu dem aufgenommenen Signal der Meiboom-Gill-Methode bei dieser Aufnahme die Maxima zwischen
@@ -126,7 +130,7 @@ geschalteten B-Puls.
 Zu erkennen ist zu Beginn des aufgenommenen Signals der $\SI{90}{\degree}$-Puls, der die Magnetisierung in die x-y-Ebene kippt.
 Daraufhin kommt es zur Dephasierung der Spins mit der $T_2$-Zeit. Der $\SI{180}{\degree}$-Puls, der durch einen kleinen Ausschlag
 zwischen dem Maximum und Minimum zu erkennen ist, sorgt für eine Rephasierung. Diese führt zu einem messbaren Signal, welches 
-jedoch aufgrund der Spin-Gitter-Wechselwirkung eine geringe Signalstärke aufweist.
+jedoch aufgrund der Spin-Gitter-Wechselwirkung eine geringere Signalstärke aufweist.
 
 \subsection{Diffusionsmessung}
 In Abbildung \ref{fig:diff_fit} sind die gemessenen Echohöhen gegen den Pulsabstand $\tau$ auftragen.
@@ -150,11 +154,7 @@ Die Regression liefert
   T_D &= \SI{5.57(025)e-6}{\second}
 \end{align}
 für die gesuchten Parameter.
-Mithilfe des Zusammenhangs
-\begin{equation}
-  T_D = \frac{3}{2D\gamma^2 G^2}
-\label{eqn:D}
-\end{equation}
+Mithilfe des Zusammenhangs in Gleichung \ref{eqn:TDiffusion}
 kann die Diffusionskonstante bestimmt werden. Dabei beschreibt G den Gradienten, der mittels Fouriertransformation eines Echos
 bestimmt wird. In Abbildung \ref{fig:echo_vorher} ist das verwendete Echo bei einem Pulsabstand von $\tau = \SI{0.0155}{\second}$ dargestellt. Wobei sowohl der Imaginär- als auch der Realteil
 zu sehen sind.
@@ -163,7 +163,7 @@ zu sehen sind.
   \includegraphics[width=0.9\textwidth]{../Auswertung/echo_vorher.pdf}
   \caption{Das zur Berechnung des Gradienten verwendete Echo bei einem Pulsabstand von $\tau = \SI{0.0155}{\second}$ 
   vor dem Abschneiden am Maximum und der durchgeführten 
-  Phasenkorrektur. In (\textcolor{indianred}{rot}) ist der Real- und in (\textcolor{dodgerblue}{blau}) der Imaginärteil des Signals dargestellt.}
+  Phasenkorrektur. In \textcolor{indianred}{rot} ist der Real- und in \textcolor{dodgerblue}{blau} der Imaginärteil des Signals dargestellt.}
   \label{fig:echo_vorher}
 \end{figure} \noindent
 Bevor eine Fouriertransformation durchgeführt werden kann, müssen die Messwerte des Signals so dargestellt werden, dass sie 
@@ -200,7 +200,7 @@ möglich den vorliegenden Gradienten zu
   G = \SI{0.125}{\tesla\per\meter}
 \end{align}
 zu bestimmen. Dabei wird mit $d = \SI{4.2}{\milli\meter}$ der Durchmesser des Probenröhrchens verwendet.
-Mit dem bestimmten Grradienten und Gleichung \ref{eqn:D} kann die Diffusionskonstante zu 
+Mit dem bestimmten Grradienten und Gleichung \ref{eqn:TDiffusion } kann die Diffusionskonstante zu 
 \begin{align}
   D = \SI{2.41(011)e-10}{\square\meter\per\second}
 \end{align}
@@ -232,4 +232,4 @@ für ihr Volumen gilt, ergibt sich für den gesuchten Molekülradius
   r = \sqrt[3]{\frac{m_\text{But}}{4\sqrt{2}\rho}} \approx \SI{2.99}{\angstrom} .
 \end{align}
 Dabei wird $m_\text{But}$ mithilfe einer Molaren Masse von $\SI{74.12}{\gram\per\mole}$ berechnet. 
-Die Dichte von 1-Butanol beträgt bei Raumtemperatur ca.$\SI{0.81}{gram\per\cubic\meter}$ \cite{dichte}.
+Die Dichte von 1-Butanol beträgt bei Raumtemperatur ca. $\SI{0.81}{\gram\per\cubic\meter}$ \cite{dichte}.

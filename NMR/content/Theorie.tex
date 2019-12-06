@@ -2,7 +2,7 @@
 
 \subsection{Spinbewegung im Magnetfeld}
 
-Betrachtet man einen Atomkern mit einem Kernspin $I>0$, so besitzt dieser ein magnetisches Moment
+Wird ein Atomkern mit einem Kernspin $I>0$ betrachtet, so besitzt dieser ein magnetisches Moment
 \begin{equation*}
   \vec{\mu} = \gamma \vec{I}
 \end{equation*}
@@ -13,7 +13,7 @@ Für Protonen mit Spin $I = \sfrac{1}{2}$ gilt
 \end{equation*}
 
 In einem Magnetfeld $\vec{B_0} = B_0 \vec{e_z}$ erfährt ein Proton wegen seines magnetischen Moments ein Drehmoment $\vec{T}$.
-Vereinfacht kann man diesen Spin als Kreisel in dem Magnetfeld betrachten.
+Vereinfacht kann dieser Spin als Kreisel in dem Magnetfeld betrachtet werden.
 Aus
 \begin{align*}
   \vec{T} &= \vec{\mu} \times \vec{B_0}  \\
@@ -23,8 +23,8 @@ folgt eine Spinpräzission
 \begin{equation}
   \vec{I} =
   \begin{pmatrix*}[c]
-    I_{\text{x$_0$}} \, cos(\gamma B_0 t + \phi_0) \\
-    -I_{\text{y$_0$}} \, sin(\gamma B_0 t + \phi_0) \\
+    I_{\text{x$_0$}} \, \cos(\gamma B_0 t + \phi_0) \\
+    -I_{\text{y$_0$}} \, \sin(\gamma B_0 t + \phi_0) \\
     I_{\text{z$_0$}}
 \end{pmatrix*}
  \, .
@@ -56,7 +56,7 @@ Es sind also immer mehr Spins in dem energetisch günstigeren Zustand up und es 
 
 \subsection{Quermagnetisierung}
 
-Um nun in einer Spule eine Spannung zu induzieren, wird die Langsmagnetisierung der Probe auf die x-y-Ebende gekippt und die sogenannte Quermagnetisierung erzeugt.
+Um nun in einer Spule eine Spannung zu induzieren, wird die Langsmagnetisierung der Probe auf die x-y-Ebene gekippt und die sogenannte Quermagnetisierung erzeugt.
 Dazu muss zuerst ein Koordinatensystem eingeführt werden, welches mit der Lamorfrequenz rotiert, in dem Koordinatensystem steht der Vektor des magnetischen Moments still.
 
 Um das magnetische Moment nun auf die x-y-Ebene zu kippen, wird ein transversales Magnetfeld B$_1$ senkrecht zum ersten Magnetfeld B$_0$ eingeschaltet. Dieses, im rotierenden Koordinatensystem stehende, Magnetfeld entspricht einer linear polarisierten elektromagnetischen Welle mit der Lamorfrequenz im nicht rotierenden Koordinatensystem.
@@ -72,7 +72,7 @@ Dies induziert in einer Spule eine Spannung mit der Lamorfrequenz, in typischen 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Relaxation    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Relaxation}
-Durch Wechselwirkungsprozesse bleibt die Magnetisierung nicht in der x-y-Ebene, sondern relaxieren wieder in ihre Ursprungsausrichtung entlang der z-Achse.
+Durch Wechselwirkungsprozesse bleibt die Magnetisierung nicht in der x-y-Ebene, sondern relaxiert wieder in ihre Ursprungsausrichtung entlang der z-Achse.
 Dies erzeugt in der Spule ein exponentiell abfallendes Spannungssignal, welches Free Induction Decay (FID) genannt wird.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Theorie T1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +92,7 @@ auf. Dabei beschreibt $M_\text{z$_0$}$ die Gesamtmagnetisierung vor dem Schalten
 
 \subsubsection{Spin-Spin Wechselwirkung: $T_2$-Zeit}
 
-Das Magnetische Feld wird durch die Anwesenheit von anderen Spins lokal gestört und es herrscht eine andere Lamorfrequenz.
+Das magnetische Feld wird durch die Anwesenheit von anderen Spins lokal gestört und es herrscht eine andere Lamorfrequenz.
 Dadurch dephasieren die Spins und die Quermagnetisierung nimmt mit
 \begin{equation}
   M_\text{x,y} = M_\text{x$_0$,y$_0$} \cdot e^{-\sfrac{t}{T_2}}
@@ -149,7 +149,7 @@ Eine schematische Darstellung der Meiboom-Gill-Methode ist in Abbildung \ref{fig
 
 \subsection{Diffusion}
 
-Wird ein Gradienten in das statische B1-Feld geschaltet, spüren die Spins lokal unterschiedliche Lamorfrequenzen.
+Wird ein Gradienten in das statische $B_1$-Feld geschaltet, spüren die Spins lokal unterschiedliche Lamorfrequenzen.
 Durch die Brownsche Molekularbewegung wechseln die Moleküle während der Zeit $2\tau$ nach dem \SI{90}{\degree}-Puls ihren Ort.
 Die Rephasierung der Spins wird somit gestört und die Signalamplitude nimmt schneller ab, als in Gleichung \eqref{eqn:T2Zeit} beschrieben.
 Für die Zeit $2\tau$, also dem Zeitpunkt des rephasierten Echos, beträgt die die Magnetisierung der Probe
@@ -157,7 +157,7 @@ Für die Zeit $2\tau$, also dem Zeitpunkt des rephasierten Echos, beträgt die d
   M(2\tau) = M_\text{x$_0$,y$_0$} \cdot e^{(\frac{-2\tau}{T_2})} \cdot e^{(\frac{-\tau^3}{T_\text{D}})} \, .
   \label{eqn:Diffusion}
 \end{equation}
-Der neue Exponentialtherm beschreibt dabei die Abnahme der Signals mit der Zeitkonstanten
+Der neue Exponentialtherm beschreibt dabei die Abnahme des Signals mit der Zeitkonstanten
 \begin{equation}
   T_\text{D} = \frac{3}{2D \gamma^2 G^2}\,.
   \label{eqn:TDiffusion}
@@ -182,7 +182,7 @@ In Abbidung \ref{fig:Aufbau} ist der gesamte Aufbau schematisch dargestellt.
 Herzstück des Aufbaus ist der Pulsgenerator.
 An diesem können zwei unterschiedliche Pulse \textbf{A} und \textbf{B} eingestellt werden.
 Puls \textbf{A} wird immer als Erstes vom Pulsgenerator erzeugt.
-Die Pulslänge von \textbf{A} kann am Pulsgenerator eingestellt werden, genauso wie die des Puls \textbf{B} und deM zeitlichen Abstand zwischen \textbf{A} und \textbf{B}.
+Die Pulslänge von \textbf{A} kann am Pulsgenerator eingestellt werden, genauso wie die des Puls \textbf{B} und dem zeitlichen Abstand zwischen \textbf{A} und \textbf{B}.
 Weiterhin kann für \textbf{B} die Wiederholungszahl eingestellt werden.
 Der Pulsgenerator wiederholt automatisch die Sequenzen mit einer einstellbaren Periodendauer.
 Außerdem ist der Pulsgenerator mit dem Oszilloskop verbunden, um den Trigger des Oszilloskop auf einen der beiden Pulse zu setzen.
@@ -238,7 +238,7 @@ Die Periode, also der Abstand zwischen zwei \SI{180}{\degree}-Pulsen wird zuerst
 Der Pulsabstand \tau zwischen Puls \textbf{A} und Puls \textbf{B} wird dann in einem Bereich von $\tau \in [\SI{1}{\milli\second}, \SI{10}{\second}]$ weiter erhöht, bis die maximale Amplitude des FID auf der negativen Achse liegt.
 Für jeden Pulsabstand wird die Amplitude des FID nach Puls \textbf{A} gemessen, dafür muss gegebenenfalls der Messbereich des Oszilloskops vergrößert werden, um das Signal nach Puls \textbf{A} zu detektieren.
 Bei Werten von $\tau > \SI{1}{\second}$ wird die Periode auf $ P =\SI{10}{\second} + \tau$ erhöht.
-Im Bereich des Nulldurchgangs werden mehr Messwerte als an den Rändern des Messbereichs bestimmt, um eine größere Genauigkeit für die Ausgleichsrechnung zur Bestimmung der $T_1$-Zeit zu erziehlen.
+Im Bereich des Nulldurchgangs werden mehr Messwerte als an den Rändern des Messbereichs bestimmt, um eine größere Genauigkeit für die Ausgleichsrechnung zur Bestimmung der $T_1$-Zeit zu erzielen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Durchführung T2   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
