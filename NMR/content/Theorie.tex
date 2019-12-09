@@ -163,12 +163,20 @@ Der neue Exponentialtherm beschreibt dabei die Abnahme des Signals mit der Zeitk
   \label{eqn:TDiffusion}
 \end{equation}
 Dabei ist $D$ der Diffusionskoeffizient und $G$ der Feldgradient im Probenkopf.
+Somit kann aus dem Feldgradienten $G$ und der Zeitkonstanten $T_\text{D}$ der Diffusionskoeffizient bestimmt werden.
+Mit diesem ist es möglich den hydrodynamischen Radius
+\begin{equation}
+  R_0 = \frac{k_\text{B} T}{6 \pi \eta D}
+  \label{eqn:stokes}
+\end{equation}
+ der untersuchten Probe zu bestimmen.
+ Ferner muss die in dem System herrschende Temperatur $T$ und die dynamische Viskosität $\eta$ der Probe bekannt sein.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Aufbau    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Aufbau}
 Dem Aufbau liegen zwei Permanentmagneten sowie die Sende- und Empfangsspule zugrunde.
-Eine Zeichnung dieser ist in Abbildung \ref{fig:NMR-Magenten} gezeigt.
+Eine Zeichnung dieser ist in Abbildung \ref{fig:NMR-Magneten} gezeigt.
 Durch die Permanentmagneten wird das statische Magnetfeld B$_0$ erzeugt, die Spule erzeugt die Radiofrequenzpulse für das B$_1$-Feld und ist direkt um den Probenkopf gewickelt.
 
 \begin{figure}[H]

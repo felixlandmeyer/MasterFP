@@ -1,7 +1,7 @@
 \documentclass[bibliography=totoc]{scrartcl}
 \usepackage{diagbox}
 \usepackage{color}
-\definecolor{indianred}{rgb}{0.8, 0.36, 0.36}      
+\definecolor{indianred}{rgb}{0.8, 0.36, 0.36}
 \definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
 \usepackage{scrhack}
 \usepackage[a4paper,top=2.5cm,right=2.5cm,left=2cm,bottom=3cm,bindingoffset=5mm]{geometry}
@@ -11,7 +11,11 @@
 \usepackage{polyglossia}
 \setmainlanguage{german}
 
-\usepackage{biblatex}
+\usepackage[
+  %style = numeric,
+  %natbib = true,
+  sorting = none
+]{biblatex}
 \addbibresource{lit.bib}
 
 \usepackage{amsmath}
