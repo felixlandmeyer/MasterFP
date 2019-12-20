@@ -9,3 +9,5 @@ Anzahl_Nulldurchgänge
 37
 37
 36
+
+#Winkelbereich der Glasplatten -2 bis ca 9 Grad

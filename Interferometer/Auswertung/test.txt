@@ -1,0 +1,1 @@
+{fit_parameter[0]} {fit_parameter[1]} {n_1022mbar_miriam}
