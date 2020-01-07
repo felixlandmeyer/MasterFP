@@ -32,8 +32,9 @@ folgt eine Spinpräzission
 
 Der Spin des Protons präzidiert also um die Richtungsachse des B-Felds während die Anfangsphase $\phi_0$ dabei einer Gleichverteilung folgt.
 Die Frequenz $\omega_0 = \gamma B_0$ wird auch als Lamorfrequenz bezeichnet.
-Die Bewegung des Spins und somit auch des magnetischen Moments des Protons in x-y Richtung kann in einer Leiterschleife eine Spannung mit der Lamorfrequenz induzieren.
-Für ein Volumen mit vielen Protonen wird aufgrund der Anfangsphasen jedoch keine Spannung gemessen.
+Die Bewegung des Spins und somit auch des magnetischen Moments des Protons in x-y Richtung kann in einer Spule eine Spannung mit der Lamorfrequenz induzieren.
+Für ein Volumen mit vielen Protonen wird aufgrund der Anfangsphasen jedoch keine Spannungsänderung gemessen, da sich die unterschiedlichen 
+Ausrichtungen der Magnetisierungsvektoren gegenseitig aufheben.
 
 
 Für die Komponente des Spins entlang des B$_{0}$-Feld folgt für Spin-$\sfrac{1}{2}$ Teilchen
@@ -56,7 +57,7 @@ Es sind also immer mehr Spins in dem energetisch günstigeren Zustand up und es 
 
 \subsection{Quermagnetisierung}
 
-Um nun in einer Spule eine Spannung zu induzieren, wird die Langsmagnetisierung der Probe auf die x-y-Ebene gekippt und die sogenannte Quermagnetisierung erzeugt.
+Um nun in einer Spule eine Spannung zu induzieren, wird die Längsmagnetisierung der Probe auf die x-y-Ebene gekippt und die sogenannte Quermagnetisierung erzeugt.
 Dazu muss zuerst ein Koordinatensystem eingeführt werden, welches mit der Lamorfrequenz rotiert, in dem Koordinatensystem steht der Vektor des magnetischen Moments still.
 
 Um das magnetische Moment nun auf die x-y-Ebene zu kippen, wird ein transversales Magnetfeld B$_1$ senkrecht zum ersten Magnetfeld B$_0$ eingeschaltet. Dieses, im rotierenden Koordinatensystem stehende, Magnetfeld entspricht einer linear polarisierten elektromagnetischen Welle mit der Lamorfrequenz im nicht rotierenden Koordinatensystem.
@@ -73,7 +74,7 @@ Dies induziert in einer Spule eine Spannung mit der Lamorfrequenz, in typischen 
 
 \subsection{Relaxation}
 Durch Wechselwirkungsprozesse bleibt die Magnetisierung nicht in der x-y-Ebene, sondern relaxiert wieder in ihre Ursprungsausrichtung entlang der z-Achse.
-Dies erzeugt in der Spule ein exponentiell abfallendes Spannungssignal, welches Free Induction Decay (FID) genannt wird.
+Daraus folgt ein exponentieller Abfall des Spannungssignals in der Spule, welcher Free Induction Decay (FID) genannt wird.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    Theorie T1    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -81,12 +82,12 @@ Dies erzeugt in der Spule ein exponentiell abfallendes Spannungssignal, welches 
 
 Durch Wechselwirkung der Protonen mit umliegenden Molekülen können jene, durch Abgabe von Energiequanten $\Delta E = \hbar \omega_0$, in den Grundzustand zurückfallen.
 Dies ist ein statistischer Prozess, der stark von dem untersuchten Material abhängt.
-Die Gesamtmagnetisierung in z-Richtung baut sich mit der Zeitkonstanten $T_1$ mit
+Die Gleichgewichtsmagnetisierung in z-Richtung baut sich mit der Zeitkonstanten $T_1$ mit
 \begin{equation}
   M_\text{z} = M_\text{z$_0$} \, (1-e^{-\sfrac{t}{T_1}})
   \label{eqn:T1Zeit}
 \end{equation}
-auf. Dabei beschreibt $M_\text{z$_0$}$ die Gesamtmagnetisierung vor dem Schalten des B$_1$-Feldes.
+auf. Dabei beschreibt $M_\text{z$_0$}$ die Gleichgewichtsmagnetisierung vor dem Schalten des B$_1$-Feldes.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Theorie T2    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -107,7 +108,7 @@ Durch die Bestimmung der Zeitkonstanten $T_1$ und $T_2$ können so Informationen
 
 \subsection{Messsequenzen}
 
-Um die $T_1$- oder $T_2$-Zeit zu bestimmen werden verschiedene Pulssequenzen des B1-Pulses geschaltet.
+Um die $T_1$- oder $T_2$-Zeit zu bestimmen werden verschiedene Pulssequenzen des B$_1$-Feldes geschaltet.
 Die $T_1$-Zeit wird in diesem Versuch durch die \textbf{Inversion-Recovery} bestimmt.
 Dabei wird zu Beginn ein \SI{180}{\degree}-Puls geschaltet und die Magnetisierung auf die negative z-Achse gekippt.
 Nach einer Zeit $\tau$ kippt ein \SI{90}{\degree}-Puls die Magnetisierung auf die x-y-Ebene, die Stärke der Quermagnetisierung ist dann abhängig von der Relaxation der Magnetisierung in z-Richtung mit $T_1$.
@@ -182,7 +183,7 @@ Durch die Permanentmagneten wird das statische Magnetfeld B$_0$ erzeugt, die Spu
 \begin{figure}[H]
   \centering
   \includegraphics[width = .4\textwidth]{NMR-Magnete.png}
-  \caption{Spulen zur Erzeugung der Magnetfelder. Die großen Permanentmagneten erzeugen das statische B$_0$-Feld. Die, senkrecht zu den Permanentmagneten um den Probenkopf gewickelte Spule erzeugt die B$_1$-Pulse und misst die Signale der Probe \cite{Aachen}. }
+  \caption{Spulen zur Erzeugung der Magnetfelder. Die großen Permanentmagneten erzeugen das statische B$_0$-Feld. Die senkrecht zu den Permanentmagneten um den Probenkopf gewickelte Spule erzeugt die B$_1$-Pulse und misst die Signale der Probe \cite{Aachen}. }
   \label{fig:NMR-Magneten}
 \end{figure}
 
@@ -264,6 +265,7 @@ Weiterhin wird ein Bild einer Messung ohne die Phasenverschiebung des \SI{180}{\
 
 \subsection{Diffusionsmessung}
 Zur Auswahl einer möglichst kleinen Schichtdicke wird der z-Gradient auf den höchsten Wert gestellt und umgepolt.
+Kleine Schichtdicken werden aufgewählt, um den Einfluss der $T_2^*$-Zeit möglichst gering zu halten.
 Die weiteren Gradienten bleiben unverändert.
 Puls \textbf{A} wird weiterhin als \SI{90}{\degree} und Puls \textbf{B} als \SI{180}{\degree} geschaltet.
 Es wird pro Periode ein Puls \textbf{B} geschaltet.
