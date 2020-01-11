@@ -31,7 +31,7 @@ zu der eines Isolators kleiner. Somit können hier mithilfe von thermischer Ener
 gehoben werden und das entsprechende Material wird leitend. Mithilfe von Dotierungen können die Bandlücken 
 von Halbleitern verkleinert werden. Dazu werden Ladungsträger in das Material eingefügt. Dabei wird zwischen 
 n- und p-Dotierung unterschieden. Bei einer n-Dotierung werden Elektronen-Donatoren, wohingegen bei einer p-Dotierung
-Elektronen-Akzeptoren in das Material eingefügt werden. Diese sorgen dann für eine veränderte Bandstruktur, diese 
+Elektronen-Akzeptoren in das Material eingefügt. Diese sorgen dann für eine veränderte Bandstruktur, diese 
 ist in Abbildung \ref{fig:BS_neu} dargestellt. \\
 \begin{figure}[H]
     \centering
@@ -43,3 +43,37 @@ ist in Abbildung \ref{fig:BS_neu} dargestellt. \\
 Bei einem Metall liegt kein Bandlücke vor. Außerdem ist das Leitungsband bereits zum Teil gefüllt. Somit reichen
 bereits beliebig kleine Feldstärken aus, damit Elektronen in einen höheren Zustand übergehen können. Sie können 
 als frei angenommen werden. 
+
+\subsection{Faraday-Effekt}
+Der Faraday-Effekt beschreibt die Drehung der Polarisationsrichtung einer einfallenden linear 
+polarisierten Welle unter dem Einfluss eines magnetischen Feldes. Eine linear polarisierte Welle 
+kann als Überlagerung zweier zirkular polarisierter Wellen angenommen werden. Tritt eine solche Welle in 
+ein optisch anisotropes Medium so kommt es aufgrund der verschiedenen Phasenkomponenten der zirkularen
+Komponenten zu einer Drehung der Polarisationsebene. Bei dem Eintritt in das Medium weist die Welle 
+lediglich eine Komponente in eine Raumrichtung auf. Nach dem Durchlauf kommt es aufgrund der Drehung 
+zusätzlich zu einem Beitrag in eine weitere Raumrichtung. Die Polarisationsrichtung ist somit um den 
+Winkel $\theta$ gedreht. Aufgrund der unterschiedlichen Phasengeschwindigkeiten liegen ebenfalls 
+unterschiedliche Brechungsindices vor. Aufgrund dessen wird in diesem Zusammenhand auch oftmals von einer 
+Doppelbrechung gesprochen. Diese entsteht aufgrund der Die Doppelbrechung entsteht 
+durch die Wechselwirkung der Bandelektronen mit den Rümpfen der Atome und 
+den elektrische Dipolmomente der Atome auf den Gitterplätzen des Kristalls. \\
+Mathematisch wird dieser Vorgang durch den Suszeptibilitätstensor beschrieben. Bei den zuvor beschriebenen 
+anisotropen Medien handelt es sich dabei um einen Tensor mit Einträgen auf der Haupt- und den Nebendiagonalen. 
+Die Einträge auf den Nebendiagonalen sind dabei die komplex konjugierten der Hauptdiagonaleneinträge. \\
+\par 
+Der Faraday-Effekt ist jedoch nicht außschließlich bei den zuvor erwähnten anisotropen Medien zu beobachten. 
+Liegt ein Festkörper vor, der ausschließlich Einträge auf der Hauptdiagolen besitzt, findet ein 
+Magnetfeld Anwendung. Durch Verwendung diese Magnetfeldes kommt es dazu, dass das Material doppelbrechend wird 
+und ebenfalls komplex konjugierte Einträge erhält. Daraus folgt, dass der Drehwinkel $\theta$ 
+proportional zur Flussdichte B, der Länge des Kristalls L und zur Anzahl der Ladungsträger pro Volumeneinheit N
+ist. Somit ergibt sich 
+\begin{equation}
+    \theta = \frac{e_0^3 \lambda ^2 N L B}{8 \pi^2 \epsilon_0 c^3 (m^*)^2 n}
+    \label{eqn:effmass}
+\end{equation} \noindent
+für den Drehwinkel. Dabei beschreibt L die Länge der Probe, B die magnetische Flussdichte und N die 
+Ladungsträgerdichte. Außerdem beschreibt $\lambda$ die Wellenlänge und $m^*$ die effektive Masse der
+Ladungsträger. Diese kommt zum Einsatz, da sie im Gegensatz zu der Elektronenmasse die Einflüsse des 
+Gitterpotentials im Kristall bercksichtigt. Dazu betrachtet sie die Ladungsträger wie freie Elektronen bzw. 
+Löcher im Vakuum, lediglich mit einer anderen Masse. Somit ist es mithilfe des Faraday-Effektes und Bestimmung
+der Drehwinkel möglich die effektive Masse der Ladungsträger zu bestimmen.

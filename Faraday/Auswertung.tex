@@ -1,0 +1,171 @@
+\section{Auswertung}
+Alle Ausgleichsrechnungen werden mit dem Paket \texttt{scipy.optimize.curve\_fit}  aus \texttt{Python 3.7.3} durchgeführt.
+Die Unsicherheit auf die gemessenen Ereignisse $N$ beträgt $\sigma_\text{N} = \sqrt{N}\,$.
+Für Rechnungen mit fehlerbehafteten Größen wird das Paket \texttt{uncertainties} aus \texttt{Python 3.7.3} verwendet.
+
+\subsection{Messung des Magnetfeldes}
+Zunächst werden die aufgenommen Daten zur Bestimmung des Magnetfeldes untersucht. Die gemessenen Werte 
+sind in Tabelle \ref{tab:MF_Messung} aufgeführt. 
+\begin{table}[H]
+    \centering
+    \caption{Aufgenommene Werte bei der Bestimmung des Magnetfeldes mithilfe einer Hallsonde.}
+    \label{tab:MF_Messung}
+    \begin{tabular}{cc}
+      \toprule
+      Position x\, / \, $\si{\milli\meter}$ & B-Feld \, / \, $\si{\milli\tesla}$  \\
+      \midrule
+      115 & 50  \\
+      120 & 180 \\
+      125 & 221 \\
+      126 & 222 \\
+      127 & 223 \\
+      128 & 224 \\
+      129 & 224 \\
+      130 & 224 \\
+      131 & 222 \\
+      132 & 219 \\
+      133 & 215 \\
+      134 & 209 \\
+      135 & 201 \\
+      140 & 89  \\
+      \bottomrule
+  \end{tabular}
+ \end{table} \noindent
+ In Abbildung \ref{fig:MF_Messung} sie die Magnetfeldstärken gegen die Position x aufgetragen. 
+ %\begin{figure}[H]
+ %    \centering
+ %    \includegraphics[width=0.8\textwidth]{Plots/Magnetfeldstärke.png}
+ %    \caption{Darstellung der aufgenommenen Werte des Magnetfeldes aufgetragen gegen die Position x der Hallsonde.}
+ %    \label{fig:MF_Messung}
+ %\end{figure} \noindent
+ Die Position der Probe wird auf $\SI{131}{\milli\meter}$ ?? bestimmt. Somit wird in den folgenden Teilen der 
+ Auswertung für das vorherrschende Magnetfeld eine Stärke von 
+ \begin{align*}
+     B_\text{Probe} = \SI{223}{\milli\tesla}
+ \end{align*} \noindent
+ angenommen. 
+
+ \subsection{Messung der hochreinen GaAs-Probe}
+ Als Referenzprobe wird eine hochreine, undotierte GaAs-Probe untersucht.
+ Mit einer bekannten Dicke der Probe von $\SI{5.11}{\milli\meter}$ kann zu jeder der untersuchten 
+ Wellenlänge der normierte Drehwinkel bestimmt werden. Diese sind zusammen mit den gemessenen Werten sowie den 
+ entsprechenden Wellenlängen in Tabelle \ref{tab:hr_messung} aufgeführt.
+ \begin{table}[H]
+    \centering
+    \caption{Aufgenommene Werte bei der Untersuchung der hochreinen GaAs-Probe als Referenz. Außerdem sind die 
+    berechneten normierten Roationswinkel aufgetragen.}
+    \label{tab:MF_Messung}
+    \begin{tabular}{ccccc}
+      \toprule
+      $\lambda\, / \, \si{\micro\meter}$ & $\Phi_1 \, / \, \si{\degree}$ & $\Phi_2 \, / \, \si{\degree}$ & $\Phi_\text{rot} \, / \, \si{\degree}$ & $\Phi_\text{norm} \, / \, \si{\radian\per\milli\meter}$  \\
+      \midrule
+      1.060 & 250.63 & 275.68 &  &  \\
+      1.290 & 252.47 & 270.60 &  &  \\
+      1.450 & 255.73 & 270.42 &  &  \\
+      1.720 & 257.42 & 267.40 &  &  \\
+      1.960 & 254.67 & 261.28 &  &  \\
+      2.156 & 254.78 & 260.00 &  &  \\
+      2.340 & 229.43 & 239.22 &  &  \\
+      2.510 & 211.03 & 215.72 &  &  \\
+      2.650 & 247.65 & 253.57 &  &  \\
+      \bottomrule
+    \end{tabular}
+   \end{table} \noindent
+   In Abbildung \ref{fig:hr_Messung} sind die normierten Rotationswinkel in Abhängigkeit von der quadrierten 
+   Wellenlänge dargestellt. 
+   %\begin{figure}[H]
+   %    \centering
+   %    \includegraphics[with=0.8\textwidth]{}
+   %    \caption{Darstellung der berechneten normierten Rotationswinkel in Abhängigkeit von der Wellenlänge 
+   %    zum Quadrat. Aufgeführt sind in dieser Abbildung die Ergebnisse der Untrsuchung der hochreinen GaAs-Probe. }
+   %    \label{fig:hr_Messung}
+   %\end{figure}
+
+   \subsection{Untersuchung der dotierten GaAs-Proben}
+   Analog zu der hochreinen Probe werden zwei dotierte GaAs-Proben untersucht und die normierten Rotationswinkel 
+   bestimmt. Die Messwerte, sowie die berechneten Werte sind in Tabelle \ref{tab:Probe1} aufgeführt. 
+   In Tabelle \ref{tab:Probe2} sind die Ergebnisse der zweiten untersuchten Probe dargestellt. Die Dicke 
+   von Probe 1 beträgt $\SI{1.36}{\milli\meter}$ und von Probe 2 $\SI{1.296}{\milli\meter}$. Zusätzlich 
+   werden die zuvor berechneten Werte für die undotierte Probe von den Werten der entsprechenden Wellenlänge 
+   abgezogen, um lediglich die freien Elektronen zu untersuchen.
+   \begin{table}[H]
+    \centering
+    \caption{Aufgenommene Werte bei der Untersuchung der ersten dotierten GaAs-Probe. Außerdem sind die 
+    berechneten normierten Roationswinkel aufgetragen.}
+    \label{tab:tab:Probe1}
+    \begin{tabular}{ccccc}
+      \toprule
+      $\lambda\, / \, \si{\micro\meter}$ & $\Phi_1 \, / \, \si{\degree}$ & $\Phi_2 \, / \, \si{\degree}$ & $\Phi_\text{rot} \, / \, \si{\degree}$ & $\Delta\Phi_\text{norm} \, / \, \si{\radian\per\milli\meter}$  \\
+      \midrule
+      1.060 & 259.03 & 269.33 &  &  \\
+      1.290 & 259.35 & 266.40 &  &  \\
+      1.450 & 261.15 & 267.67 &  &  \\
+      1.720 & 259.43 & 265.83 &  &  \\
+      1.960 & 261.67 & 261.92 &  &  \\
+      2.156 & 253.78 & 261.00 &  &  \\
+      2.340 & 229.17 & 236.00 &  &  \\
+      2.510 & 209.18 & 227.58 &  &  \\
+      2.650 & 258.42 & 257.27 &  &  \\
+      \bottomrule
+    \end{tabular}
+   \end{table} \noindent
+
+
+   \begin{table}[H]
+    \centering
+    \caption{Aufgenommene Werte bei der Untersuchung der zweiten dotierten GaAs-Probe. Außerdem sind die 
+    berechneten normierten Roationswinkel aufgetragen.}
+    \label{tab:tab:Probe2}
+    \begin{tabular}{ccccc}
+      \toprule
+      $\lambda\, / \, \si{\micro\meter}$ & $\Phi_1 \, / \, \si{\degree}$ & $\Phi_2 \, / \, \si{\degree}$ & $\Phi_\text{rot} \, / \, \si{\degree}$ & $\Delta\Phi_\text{norm} \, / \, \si{\radian\per\milli\meter}$  \\
+      \midrule
+      1.060 & 257.55 & 267.50 &  &  \\
+      1.290 & 256.33 & 265.73 &  &  \\
+      1.450 & 257.82 & 262.13 &  &  \\
+      1.720 & 255.83 & 265.25 &  &  \\
+      1.960 & 251.80 & 262.42 &  &  \\
+      2.156 & 249.72 & 261.17 &  &  \\
+      2.340 & 223.67 & 240.00 &  &  \\
+      2.510 & 212.38 & 226.68 &  &  \\
+      2.650 & 245.62 & 259.52 &  &  \\
+      \bottomrule
+    \end{tabular}
+   \end{table} \noindent
+   In Abbildung \ref{fig:beideProben} sind die berechnten normierten Rotationswinkel beider Proben in
+   Abhängigkeit der quadratischen Wellenlänge dargestellt.
+   %\begin{figure}[H]
+   %    \centering
+   %    \includegraphics[width=0.8\textwidth]{}
+   %    \caption{Darstellung der berechneten normierten Rotationswinkel der beiden untersuchten 
+   %    dotierten GaAs-Proben in Abhängigkeit des Wellenlängenquadrats. Zudem sind die linearen
+   %    Ausgleichgerade abgebildet.}
+   %    \label{fig:beideProben}
+   %\end{figure} \noindent
+   Für beide Proben wird eine Ausgleichgerade der 
+   Form 
+   \begin{equation}
+       \Delta \Phi_\text{norm} = A \lambda^2 + b
+   \end{equation} \noindent
+   an die Werte angepasst. Daraus ergeben sich für die erste Probe für die Parameter
+   \begin{align}
+       A_\text{Probe1} &= \SI{11(1)}{\radian\per\cubic\milli\meter}, \\
+        b_\text{Probe1} &= \SI{11(1)}{\radian\per\milli\meter}.
+   \end{align} \noindent
+   Analog ergeben sich 
+   \begin{align}
+    A_\text{Probe2} &= \SI{11(1)}{\radian\per\cubic\milli\meter}, \\
+     b_\text{Probe2} &= \SI{11(1)}{\radian\per\milli\meter}
+   \end{align} \noindent       
+    für die zweite untersuchte dotierte Probe. Daraus lassen sich mithilfe von Formel \ref{eqn:effmass} 
+    die effektiven Massen, sowie das Verhältnis zur Elektronenmasse bestimmen. Somit ergibt sich 
+    \begin{align}
+        m_\text{Probe1}^* &= \SI{11(1)}{\kilo\gram} \\
+        \frac{m_\text{Probe1}^*}{m_\text{e}} &= 
+    \end{align} \noindent 
+    für Probe 1. Analog ergibt sich für Probe 2
+    \begin{align}
+        m_\text{Probe2}^* &= \SI{11(1)}{\kilo\gramm} \\
+        \frac{m_\text{Probe2}^*}{m_\text{e}} &= .
+    \end{align} \noindent 
+    

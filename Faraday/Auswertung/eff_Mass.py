@@ -14,11 +14,16 @@ def Messung(path, probe_lenth):
     min_2 /= 60
     phi_1 += min_1
     phi_2 += min_2
+ #   print(phi_1)
+ #   print(phi_2)
     phi_1 /= probe_lenth #mm
     phi_2 /= probe_lenth #mm
     phi = abs(phi_1 - phi_2) / 2
     phi = np.radians(phi)
     return phi,lam
+
+#Messung("data/Probe_2.txt", 1.296)
+
 
 lam = Messung("data/Hochrein.txt", 5.11)[1]
 
