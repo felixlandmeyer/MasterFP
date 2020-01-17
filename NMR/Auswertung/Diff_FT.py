@@ -3,7 +3,9 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from scipy.signal import find_peaks_cwt
-
+import uncertainties as unc
+from uncertainties import ufloat
+import scipy.constants
 
 times_v, imag_v, real_v = np.genfromtxt('../data/scope_80.csv', unpack=True, delimiter=',')
 
@@ -68,7 +70,27 @@ shoulder_high = 292
 test_x=[test[shoulder_low],test[shoulder_high]]
 test_y=[np.real(fftdata)[shoulder_low],np.real(fftdata)[shoulder_high]]
 
-print('Frequenzverschiebung =', test[shoulder_high]-test[shoulder_low], 'kHz')
+d_f = (test[shoulder_high]-test[shoulder_low]) * 10**3
+
+gamma_proton = 42.577 * 10**6
+k = scipy.constants.k
+eta = 2.95e-3
+T = (21.5 + 273.15)
+T_D = ufloat(5.57e-6,0.25e-6)
+d = 4.2e-3
+
+Grad = 2 * np.pi * d_f / (d * gamma_proton)
+
+D = 3 / (2 * T_D * gamma_proton**2 * Grad**2)
+
+R = k * T / (6 * np.pi * eta * D)
+
+print('Frequenzverschiebung =', d_f, 'kHz')
+print(f"Gradient = {Grad} T/m")
+print(f"Diffusionskonstante= {D} in m^2/s")
+print(f"Radius= {R} in m")
+
+
 
 #Plott zur Frequenz
 plt.plot((freqs/1000), np.real(fftdata), 'x', color='grey', label='Werte der Fouriertrafo')
