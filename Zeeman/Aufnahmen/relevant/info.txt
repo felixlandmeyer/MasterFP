@@ -1,0 +1,17 @@
+rote Spektrallinie:
+Bild 137-0070 : B-Feld aus, Polarisation 0, Zoom 30x
+Bild 137-0071 : B-Feld 11A, Polarisation 0, Zoom 30x
+Bild 137-0072 : B-Feld 11A, Polarisation 90, Zoom 30x
+
+blaue Spektrallinie:
+Bild 137-0085 : B-Feld aus, Polarisation 0, Zoom 30x
+Bild 137-0086 : B-Feld 4.3A, Polarisation 0, Zoom 30x
+Bild 137-0087 : B-Feld 4.3A, Polarisation 90, Zoom 30x
+Bild 137-0088 : B-Feld 18A, Polarisation 90, Zoom 30x
+Bild 137-0090 : B-Feld 18A, Polarisation 0, Zoom 30x
+
+blaue Spektrallinie mit Assistent:
+Bild 137-0091 : B-Feld aus, Polarisation 0, Zoom 30x
+Bild 137-0093 : B-Feld aus, Polarisation 0, Zoom 30x
+Bild 137-0094 : B-Feld 5.75A, Polarisation 0, Zoom 30x
+Bild 137-0096 : B-Feld 19A, Polarisation 90, Zoom 30x
