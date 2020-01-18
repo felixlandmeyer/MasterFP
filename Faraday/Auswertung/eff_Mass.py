@@ -93,12 +93,16 @@ A_delta_phi_2 = ufloat(params_delta_phi_2[0],errors_delta_phi_2[0])
 eff_m_1 = unp.sqrt( cont.e**3 * N_1 * B*10**-3 / (8 * np.pi**2 * cont.c**3 * cont.epsilon_0 * n * A_delta_phi_1) )
 eff_m_2 = unp.sqrt( cont.e**3 * N_2 * B*10**-3 / (8 * np.pi**2 * cont.c**3 * cont.epsilon_0 * n * A_delta_phi_2) )
 
-mean_eff = np.mean([eff_m_1,eff_m_2])
-
 V_eff_1 = eff_m_1 / cont.m_e
 V_eff_2 = eff_m_2 / cont.m_e
 
+mean_eff = np.mean([eff_m_1,eff_m_2])
 mean_V = np.mean([V_eff_1,V_eff_2])
+
+V_lit = 0.067
+
+Abw_eff = (1 - mean_eff/cont.m_e)
+Abw_V = (1 - mean_V/V_lit)
 
 print(f"normierte Winkeldifferenz Hochrein:\n {Phi_probe_rein * 10**-3} in rad/mm")
 print(f"normierte Winkeldifferenz Probe 1:\n {Phi_probe_1 * 10**-3}in rad/mm")
@@ -110,51 +114,52 @@ print(f"normierte Winkeldifferenz Probe 2:\n {Phi_probe_2 * 10**-3}in rad/mm")
 print(f"Probe 1 \n A = {A_delta_phi_1 * 10 **-9} in rad/mm3 \n m_eff = {eff_m_1} in kg \n V_eff = {V_eff_1}")
 print(f"Probe 2 \n A = {A_delta_phi_2 * 10 **-9} in rad/mm3 \n m_eff = {eff_m_2} in kg \n V_eff = {V_eff_2}")
 print(f"Mittelwerte:\n m_eff = {mean_eff} \n V_eff = {mean_V}")
+print(f"Abweichungen:\n Abw_eff = {Abw_eff} \n Abw_V = {Abw_V}")
 
 # Plotte alle Messwerte
 #fig,(ax1,ax2,ax3) = plt.subplots(3,1,figsize = (5,5))
-#ax1.scatter((lam*10**6)**2, Phi_probe_rein * 10 **-3, color = "red", label = r"\phi_\text{norm. rein}")
-#ax1.set_ylabel(r"$\phi_\text{norm. rein} \, / \, \si{\radian\per\milli\meter}$")
-#ax2.scatter((lam*10**6)**2, Phi_probe_1 * 10 **-3, color = "blue", label = r"\phi_\text{norm. 1}")
-#ax2.set_ylabel(r"$\phi_\text{norm. 1} \, / \, \si{\radian\per\milli\meter}$")
-#ax3.scatter((lam*10**6)**2, Phi_probe_2 * 10 **-3, color = "green", label = r"\phi_\text{norm. 2}")
-#ax3.set_ylabel(r"$\phi_\text{norm. 2} \, / \, \si{\radian\per\milli\meter}$")
+#ax1.scatter((lam*10**6)**2, Phi_probe_rein * 10 **-3, color = "red", label = r"\Phi_\text{norm. rein}")
+#ax1.set_ylabel(r"$\Phi_\text{norm. rein} \, / \, \si{\radian\per\milli\meter}$")
+#ax2.scatter((lam*10**6)**2, Phi_probe_1 * 10 **-3, color = "blue", label = r"\Phi_\text{norm. 1}")
+#ax2.set_ylabel(r"$\Phi_\text{norm. 1} \, / \, \si{\radian\per\milli\meter}$")
+#ax3.scatter((lam*10**6)**2, Phi_probe_2 * 10 **-3, color = "green", label = r"\Phi_\text{norm. 2}")
+#ax3.set_ylabel(r"$\Phi_\text{norm. 2} \, / \, \si{\radian\per\milli\meter}$")
 #plt.tight_layout()
 #plt.savefig("Plots/Messwerte_normiert.pdf", bbox_inches = "tight")
 #plt.clf()
 
 fig,ax = plt.subplots(figsize = (5,3))
-plt.scatter((lam*10**6)**2, Phi_probe_rein * 10 **-3, color = "mediumvioletred", label = r"$\phi_\text{norm. rein}$")
-plt.ylabel(r"$\phi_\text{norm. rein} \, / \, \si{\radian\per\milli\meter}$")
+plt.scatter((lam*10**6)**2, Phi_probe_rein * 10 **-3, color = "mediumvioletred", label = r"$\Phi_\text{norm. rein}$")
+plt.ylabel(r"$\Phi_\text{norm. rein} \, / \, \si{\radian\per\milli\meter}$")
 plt.xlabel(r"$\lambda^2 \, / \, \si{\micro\meter}$")
 plt.legend()
 plt.tight_layout()
 plt.savefig("Plots/Messwerte_rein.pdf")
 
 fig,ax = plt.subplots(figsize = (5,3))
-plt.scatter(1/(lam*10**6)**2, Phi_probe_rein * 10 **-3, color = "mediumvioletred", label = r"$\phi_\text{norm. rein}$")
-plt.ylabel(r"$\phi_\text{norm. rein} \, / \, \si{\radian\per\milli\meter}$")
+plt.scatter(1/(lam*10**6)**2, Phi_probe_rein * 10 **-3, color = "mediumvioletred", label = r"$\Phi_\text{norm. rein}$")
+plt.ylabel(r"$\Phi_\text{norm. rein} \, / \, \si{\radian\per\milli\meter}$")
 plt.xlabel(r"$\frac{1}{\lambda^2} \, / \, \si{\micro\meter}$")
 plt.legend()
 plt.tight_layout()
 plt.savefig("Plots/Messwerte_rein_reziprok.pdf")
 
 fig,ax = plt.subplots(figsize = (10,6))
-ax.scatter((lam*10**6)**2, delta_phi_1 * 10**-3, color = "hotpink",label = r"$\Delta \phi_\text{norm.1}$")
-ax.plot((lam*10**6)**2, lin(lam, *params_delta_phi_1) * 10**-3, color = "magenta", label = r"Ausgleichsgerade $\Delta\phi_\text{norm,1}$")
+ax.scatter((lam*10**6)**2, delta_phi_1 * 10**-3, color = "hotpink",label = r"$\Delta \Phi_\text{norm.1}$")
+ax.plot((lam*10**6)**2, lin(lam, *params_delta_phi_1) * 10**-3, color = "magenta", label = r"Ausgleichsgerade $\Delta\Phi_\text{norm,1}$")
 plt.fill_between((lam*10**6)**2,
                 lin(lam, *(params_delta_phi_1+errors_delta_phi_1)) * 10**-3,
                 lin(lam, *(params_delta_phi_1-errors_delta_phi_1)) * 10**-3,
                 color = 'magenta', alpha = 0.15,
                 )
-ax.scatter((lam*10**6)**2, delta_phi_2 * 10**-3, color = "cornflowerblue",label = r"$\Delta \phi_\text{norm.2}$")
-ax.plot((lam*10**6)**2, lin(lam, *params_delta_phi_2) * 10**-3 , color = "blue", label = r"Ausgleichsgerade $\Delta\phi_\text{norm,2}$")
+ax.scatter((lam*10**6)**2, delta_phi_2 * 10**-3, color = "cornflowerblue",label = r"$\Delta \Phi_\text{norm.2}$")
+ax.plot((lam*10**6)**2, lin(lam, *params_delta_phi_2) * 10**-3 , color = "blue", label = r"Ausgleichsgerade $\Delta\Phi_\text{norm,2}$")
 plt.fill_between((lam*10**6)**2,
                 lin(lam, *(params_delta_phi_2+errors_delta_phi_2)) * 10**-3,
                 lin(lam, *(params_delta_phi_2-errors_delta_phi_2)) * 10**-3,
                 color = 'blue', alpha = 0.15,
                 )
-ax.set_ylabel(r"$\Delta\phi_\text{norm.} \, / \, \si{\radian\per\milli\meter} $")
+ax.set_ylabel(r"$\Delta\Phi_\text{norm.} \, / \, \si{\radian\per\milli\meter} $")
 ax.set_xlabel(r"$\lambda^2 \, / \, \si{\micro\meter}$")
 ax.legend()
 plt.savefig("Plots/Fit_eff_mass.pdf", bbox_inches = "tight")
