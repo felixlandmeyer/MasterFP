@@ -1,0 +1,32 @@
+\section{Diskussion}
+
+Mit dem hier genutzen Aufbau lässt sich sehr gut die Drehung der Polarisation von polarisierten Licht durch den Faraday-Effekt erkennen.
+Durch die Verwendung zweier Photowiderstände in Kombination mit dem Differenzverstärker lassen sich deutliche, unverauschte Signale auf dem Oszilloskop sehen.
+Jedoch gab es schon bei der Justage Probleme mit der Messung der Polarisation bei ausgeschaltetem Magnetfeld.
+Beim Durchgehen des Winkelbereichs der eingestrahlten Polarisation kam es nicht, wie erwartet, bei jeweils \SI{90}{\degree} zu einem Minimum des Differenzsignals,
+sonder nach unterschiedlich großen Intervallen nahe der \SI{90}{\degree}.
+Da dies trotz mehrmaligem Neujustieren immernoch der Fall war, wurde der Versuch dennoch durchgeführt.
+\par \medskip
+Weiterhin wirkte es schon während der Versuchsdurchführung so, dass die Einstellung des Glan-Taylor Prisma als Polarisator nicht reproduzierbar waren.
+Eine Überprüfung dieser Vermutung wurde jedoch nicht durchgeführt.
+Da das Differenzsignal des Selektivverstärkers immernoch die Form einer Sinusschwingung hatte, musste die Minimalamplitude des Signals direkt am Oszilloskops abgelesen werden.
+Dies machte es schwierig, ein klares Minimum des Signals zu erkennen. Ein Tiefpassfilter als Integrator könnte ein konstantes Sigal erzeugen, welches am Oszilloskop deutlicher zu erkennen ist.
+\par \medskip
+Trotz dieser messtechnischen Probleme war es möglich, Drehwinkel der Polarisation durch das \ce{GaAs} zu bestimmen, die dem erwarteten Verlauf folgen (vgl. Abb. \ref{tab:hr_Messung}).
+Die Messung der dotierten Proben und insbesondere die Bestimmung des Drehwinkels $\Delta \Phi_\text{norm.i}$ für die freien Ladungsträger weißt erhebliche Streuung auf.
+Aus Abbildung \ref{fig:beideProben} ist ersichtlich, dass die Drehwinkel deutlich streuen und im Falle von $\Delta \Phi_\text{norm. 1}$ nur einen linearen Verlauf erahnen lassen.
+\par\medskip
+Die Bestimmung der effektiven Masse der Ladungsträger über die linearen Ausgleichsrechnungn für die Drehwinkel $\Delta \Phi_\text{norm. i}$ liefert jedoch eine effektive Masse die nahe an dem Literaturwert liegt.
+In Abbildung \ref{tab:Abweichung_lit} ist die Abweichung des Verhältnis der gemessenen, effektiven Masse der freien Ladungsträger zur Masse des Elektrons zu einem Literaturwert angegeben.
+\begin{table}[H]
+  \centering
+  \caption{Abweichung des in \eqref{eqn:V_eff} bestimmten Verhältnis der effektiven Masse zur Elektronenmasse zum Verhältnis aus \cite{eff_lit}.}
+  \label{tab:Abweichung_lit}
+  \begin{tabular}{ccc}
+    \toprule
+    $\overline{V}_\text{exp.}$ & $V_\text{Lit.}$ &  Abweichung / $\si{\percent}$ \\
+    \midrule
+    \num{0.058(6)} & 0.067 & \num{13(8)} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
