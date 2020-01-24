@@ -95,6 +95,14 @@ n_atm_miriam = np.array([
 
 print(fit_parameter[:,0],"\n", fit_parameter[:,1],"\n", n_atm_miriam)
 print("Mean:", np.mean(n_atm_miriam))
+
+n_lit = 1.000277
+
+Abw =1 - n_lit/np.mean(n_atm_miriam)
+
+print("Abweichung von Literaturwert:", Abw)
+
+
 measure_list = [M1,M2,M3,M4]
 labels = ["Messreihe 1", "Messreihe 2", "Messreihe 3", "Messreihe 4"]
 markers = ["+","*","1","x"]

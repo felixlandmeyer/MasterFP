@@ -1,34 +1,32 @@
 \section{Durchführung}
-Bevor mit der Durchführung der eigentlichen Messreihen begonnen werden kann, muss zunächst 
-der verwendete Versuchsaufbau justiert werden. In Abbildung \ref{fig:aufbau} ist der Aufbau
-schematisch dargestellt.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{bilder/Aufbau.png}
-    \caption{Schematischer Versuchsaufbau zur Bestimmung der Brechungsindices von Glas und Luft
-    mithilfe eines Sagnac-Interferometers \cite{anleitung}.}
-    \label{fig:aufbau}
-\end{figure} \noindent
-Der Aufbau besteht aus einem Helium-Neon-Laser, dessen Laserlicht über die Spiegel M1 und M2 
-auf den Strahlteilerwürfel gelenkt wird. Durch diesen wird das einfallende Licht in seinen
-horizontal und vertikal linear polarisierten Anteil aufgespalten. Diese durchlaufen den restlichen 
-Strahlengang nun in entgegengesetze Richtungen. Der horizontal polarisierte Anteil des Lichtes 
-fällt zunächst auf den Spiegel $M_\text{A}$, bevor es auf $M_\text{B}$ und $M_\text{C}$ trifft. 
-Der vertikal polarisierte Anteil trifft die Spiegel dementsprechend in umgekehrter Reihenfolge. 
-Bevor mithilfe der zwei Dioden eine Intensität gemessen werden kann, treffen beide Teilstrahlen 
-erneut auf den Strahlteilerwürfel. Damit eine Interferenzerscheinung messbar ist, ist vor den Dioden
-ein weiterer Strahlteilerwürfel positioniert, der um 45° gegenüber dem Strahlengang gekippt ist. \\
-Im ersten Versuchsteil wird die Polarisationsrichtung des Laserstrahls bestimmt, die den höchsten
-Kontrast aufweist. Dafür wird die Diodenspannung für ein Maximum und ein Minimum bei unterschiedlichen
-Polarisationsrichtung bestimmt. Dabei wird in 15°-Schritten gemessen und um das Maximum nochmal
-genauer mit 5°-Schritten. Die in diesem Aufgabenteil bestimmte Polarisationsrichtung des Laserstrahls 
-mit dem höchsten Kontrast wird für die nachfolgenden Versuchsteile beibehalten. 
-Der nächste Versuchsteil dient der Bestimmung der Brechungsindices von Glas und Luft. 
-Dafür wird zunächst der Doppelglashalter in den Strahlengang eingesetzt und die Anzahl der Minima und 
-Maxima in Abhängigkeit vom Drehwinkels bestimmt. Dafür wird das Oszilloskop und der ANDERE KLOTZ 
-genutzt, der die Anzah an Nulldulgängen anzeigt, die dem gesuchten Messwert entsprechen. Dieses
-Vorgehen wird 10 mal wiederholt. \\
-Um den Brechungsindex vo Luft in Abhängigkeit vom vorherrschenden Druck zu bestimmen, wird eine
-Gaszelle in den Strahlengang eingesetzt. Diese wird zunächst evakuiert, um dann geregelt 
-Luft zuzuführen. In Abständen von $\SI{50}{\milli\bar}$ wird die Anzahl an Nulldurchgängen notiert 
-bis sich der Atmösphärendruck wieder eingestellt hat. Dieses Vorgehen wird vier mal wiederholt.
+
+\subsection{Justage}
+Zur Justage werden die beiden Spiegel M1 und M2 so eingestellt, dass der Laserstrahl mittig auf den PBSC des Interferometers fällt.
+Weiterhin werden die Spiegel M$_\text{A,B,C}$ so eingestellt, dass der Strahl sie alle in der Mitte trifft und auch bei einem Durchgang des Strahls durch das Interferometer wieder auf die Mitte des PBSC fällt.\par
+Im Detektinspfad hinter dem PBSC wird ein \SI{45}{\degree} Polarisationsfilter aufgebaut, damit es zu Interferenz der überlagerten Strahlen kommen kann.
+Die Spiegel werden daraufhin so eingestellt, dass das Interferenzmuster auf dem Schirm verschwindet.
+Die Strahlengänge im Interferometer sind dann parallel zueinander ausgerichtet.
+\par\smallskip
+Durch einen Verschiebung des Spiegels M2 wird der auf den PBSC fallende Strahl aufgeteilt.
+Die Positionierung des Spiegels M2 wird so gewählt, dass die beiden aufgeteilten Strahlen auf die beiden Glasplättchen trifft, welche zwischen dem PBSC und dem Spiegel M$_\text{C}$ aufgebaut werden.
+
+\subsection{Kontrastmessung}
+Die Kontrastmessung des Interferometers in Abhängigkeit der eingestrahlten Polarisationsrichtung wird durch das Bestimmen von $I_\text{min}$ und $I_\text{max}$ für jede Polarisationsrichtung realisiert.
+Der erste Polarisationsfilter wird auf Winkel zwischen \SI{0}{\degree} und \SI{180}{\degree} eingestellt und für jeden dieser Winkel die Intensitäten durch Drehen der Glasplättchen gesucht.
+Der vermessene Winkelbereich wird in \SI{10}{\degree} Schritten gemessen, für hohe Kontraste werden diese auf \SI{5}{\degree} verringert.
+Der Kontrast wird direkt vor Ort berechnet und der erste Polarisationsfilter auf den Winkel des höchsten Kontrasts eingestellt.
+
+\subsection{Brechungsindex von Glas}
+
+Der zweite Polarisationsfilter wird abgebaut und durch den zweiten PBSC und die beiden Photodioden ersetzt.
+Die Glasplättchen werden um einen Winkel von $\delta = \SI{11}{\degree}$ gedreht und dabei die Anzahl der Nulldulgänge der Differenzspannung der Photodioden an einem Oszilloskop abgelesen.
+Dieser Vorgang wird zehn mal wiederholt.
+Für die Auswertung der Daten muss berücksichtigt werden, dass die Gasplättchen aufbaubedingt jeweils um einen Winkel von $\Theta = \SI{10}{\degree}$ zur Strahlrichtung gedreht sind.
+
+\subsection{Brechungsindex Luft}
+
+Zur Messung des Brechungsindex von Luft in Abhängigkeit des Luftdrucks werden die Glasplättchen aus den Strahlen entfernt und die Druckkammer in einen der Strahlengänge platziert.\par
+Diese wird mit der Vakuumpumpe evakuiert.
+Die Vakuumpumpe wird durch ein Ventil von der Druckkammer abgetrennt und diese durch ein weiteres Ventil langsam geflutet.
+Während der Flutung der Kammer werden die Nulldulgänge der Differenzspannung elektronisch gezählt und für alle \SI{50}{\milli\bar} notiert.
+Dieser Vorgang wird vier mal wiederholt.

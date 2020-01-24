@@ -13,8 +13,10 @@ Theta = np.radians(11)
 Theta_0 = np.radians(10)
 T = 1e-3
 
-n = (1 - Lambda * M / (2 * T * Theta_0 * Theta))**-1
+n = (1 - Lambda * M / (2 * T * (Theta_0 * Theta)))**-1
 n_mean = ufloat(np.mean(n), np.std(n)/ np.sqrt(len(n)))
 np.savetxt("data/Brechungsindex_Glas.txt", np.array([M, n]).T, header = "#Nulldurchgänge Brechungsindex")
-
+n_lit = 1.5
+Abw = 1 - n_mean/n_lit
+print("Abw", Abw)
 print(n_mean)
