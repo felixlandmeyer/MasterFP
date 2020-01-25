@@ -3,8 +3,8 @@ Alle Ausgleichsrechnungen werden mit dem Paket \texttt{scipy.optimize.curve\_fit
 Für Rechnungen mit fehlerbehafteten Größen wird das Paket \texttt{uncertainties} aus \texttt{Python 3.7.3} verwendet.
 
 \subsection{Eichung des Magnetfeldes}
-Im ersten Schritt der Auswertung werden die mit der Hallsonde aufgenommenen Werte für das 
-vorliegende Magnetfeld untersucht. Die gemessenen Daten der Stromstärke und die dazugehörige 
+Im ersten Schritt der Auswertung werden die mit der Hallsonde aufgenommenen Werte für das
+vorliegende Magnetfeld untersucht. Die gemessenen Daten der Stromstärke und die dazugehörige
 Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
 \begin{table}[H]
     \centering
@@ -39,7 +39,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- In Abbildung \ref{fig:Magnetfeld} sind die Messwerte zusammen mit einer linearen Ausgleichgerade der 
+ In Abbildung \ref{fig:Magnetfeld} sind die Messwerte zusammen mit einer linearen Ausgleichgerade der
  Form
  \begin{equation}
      B(I) = a \cdot I + b
@@ -47,44 +47,44 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  dargestellt.
  \begin{figure}[H]
      \centering
-     \includegraphics[width=0.8\textwidth]{../Auswertung/Magnetfeld.pdf}
-     \caption{Darstellung der aufgenommen Messwerte der Magnetfeldstärke in Abhängigkeit der Stromstärke zusammen 
+     \includegraphics[width=0.8\textwidth]{Auswertung/Magnetfeld.pdf}
+     \caption{Darstellung der aufgenommen Messwerte der Magnetfeldstärke in Abhängigkeit der Stromstärke zusammen
      mit einer linearen Ausgleichsgerade.}
      \label{fig:Magnetfeld}
  \end{figure} \noindent
- Die Regression liefert 
+ Die Regression liefert
  \begin{align}
      a &= \SI{61.08(129)}{\milli\tesla\per\ampere} \\
      b &= \SI{20.34(1581)}{\milli\tesla}
  \end{align} \noindent
- für die gesuchten Parameter. 
+ für die gesuchten Parameter.
 
  \subsection{Untersuchung der roten Spektrallinie}
- In Abbildung \ref{fig:rot} sind die aufgenommenen Interferenzbilder für die rote Spektrallinie 
+ In Abbildung \ref{fig:rot} sind die aufgenommenen Interferenzbilder für die rote Spektrallinie
  mit einer Wellenlänge von $\lambda = \SI{643.8}{\nano\meter}$ dargestellt.
  \begin{figure}[H]
      \centering
-     \includegraphics[width=0.8\textwidth]{../images/zebraplot_rot.jpg}
-     \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschidelichen 
-     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten 
+     \includegraphics[width=0.8\textwidth]{images/zebraplot_rot.jpg}
+     \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschidelichen
+     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten
      wird ein Magnetfeld von ca $\SI{1234}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
      auf $\SI{90}{\degree}$ (Unten) umgestellt.}
      \label{fig:rot}
  \end{figure} \noindent
  Zu sehen sind die unterschiedlichen Interferenzen unter verschiedenen äußeren Einflüssen. Das obere der drei
  Bilder zeigt die Spektrallinie ohne den Einfluss eines Magnetfeldes und einer Polarisation. Der Ausschnitt in
- der Mitte zeigt die Spektrallinienaufspaltung bei einem Magnetfeld der Stärke $\SI{12345}{\milli\tesla}$ und 
- einer Polarisation von $\SI{0}{\degree}$. Dieser Übergang entspricht dem $\sigma$-Übergang. Das untere 
+ der Mitte zeigt die Spektrallinienaufspaltung bei einem Magnetfeld der Stärke $\SI{12345}{\milli\tesla}$ und
+ einer Polarisation von $\SI{0}{\degree}$. Dieser Übergang entspricht dem $\sigma$-Übergang. Das untere
  Bild zeigt dementsprechend die $\pi$-Übergange. Dabei liegt ebenfalls ein Magnetfeld mit $\SI{12345}{\milli\tesla}$
- an, die Polarisation entspricht jedoch $\SI{90}{\degree}$. Bei diesem Übergang kommt es jedoch zu keiner 
- Auspaltung, da hier $\Delta m = 0$ vorliegt und somit nach Gleichung \ref{egn:E_normal} keine Energiedifferenz 
+ an, die Polarisation entspricht jedoch $\SI{90}{\degree}$. Bei diesem Übergang kommt es jedoch zu keiner
+ Auspaltung, da hier $\Delta m = 0$ vorliegt und somit nach Gleichung \ref{egn:E_normal} keine Energiedifferenz
  entsteht. \\
- Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes die Anzahl der Pixel bestimmt. 
- Die auf diese Weise bestimmten Werte sind in Tabelle \ref{tab:rot} zusammen mit den entsprechend berechneten 
- Wellenlängenverschiebungen, die mit Formel \ref{eqn:WV} berechnet werden, aufgeführt. 
+ Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes die Anzahl der Pixel bestimmt.
+ Die auf diese Weise bestimmten Werte sind in Tabelle \ref{tab:rot} zusammen mit den entsprechend berechneten
+ Wellenlängenverschiebungen, die mit Formel \ref{eqn:WV} berechnet werden, aufgeführt.
  \begin{table}[H]
     \centering
-    \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für 
+    \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für
     die ersten 10 Ordnungen.}
     \label{tab:Messwerte}
     \begin{tabular}{c|ccc}
@@ -104,38 +104,38 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- Da die Abstände der Maxima mit dem Auge abgeschätzt werden, werden sie mit einer Unsicherheit von 3 Pixeln 
- betrachtet. Damit ergibt sich für den Gesamtfehler auf die Wellenlängenverschiebung nach Gauß 
+ Da die Abstände der Maxima mit dem Auge abgeschätzt werden, werden sie mit einer Unsicherheit von 3 Pixeln
+ betrachtet. Damit ergibt sich für den Gesamtfehler auf die Wellenlängenverschiebung nach Gauß
  \begin{equation}
-     \Delta (\delta \lambda) = \frac{1}{2} \Delta \lambda \sqrt{\frac{1}{\Delta s^2} \cdot \Delta (\delta s)^2 + (\frac{\delta s}{(\Delta s)^2})^2 \cdot \Delta (\Delta s)^2}. 
+     \Delta (\delta \lambda) = \frac{1}{2} \Delta \lambda \sqrt{\frac{1}{\Delta s^2} \cdot \Delta (\delta s)^2 + (\frac{\delta s}{(\Delta s)^2})^2 \cdot \Delta (\Delta s)^2}.
  \end{equation} \noindent
  Aus den berechneten Werten für die Wellenlängenverschiebung ergibt sich durch Berechnung des Mittelwerts
  \begin{equation}
-     \delta \lambda = \SI{12.03(79)}{\pico\meter}. 
+     \delta \lambda = \SI{12.03(79)}{\pico\meter}.
  \end{equation}
 
 
  \subsection{Untersuchung der blauen Spektrallinie}
- Analog dazu sind in Abbildung \ref{fig:blau} Auschnitte aus den Aufnahmen bei der Untersuchung der blauen 
- Spektrallinie mit einer Wellenlänge von $\SI{450}{\nano\meter}$. 
+ Analog dazu sind in Abbildung \ref{fig:blau} Auschnitte aus den Aufnahmen bei der Untersuchung der blauen
+ Spektrallinie mit einer Wellenlänge von $\SI{450}{\nano\meter}$.
  \begin{figure}[H]
      \centering
-     \includegraphics[width=0.8\textwidth]{../images/zebraplot_blau.jpg}
-     \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschiedlichen 
-     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten 
+     \includegraphics[width=0.8\textwidth]{images/zebraplot_blau.jpg}
+     \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschiedlichen
+     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten
      wird ein Magnetfeld von ca $\SI{1234}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
      auf $\SI{90}{\degree}$ (Unten) umgestellt.}
      \label{fig:blau}
  \end{figure} \noindent
- Da in diesem Fall der anormale Zeeman-Effekt vorliegt, sind sowohl bei einer Polarisation von 
+ Da in diesem Fall der anormale Zeeman-Effekt vorliegt, sind sowohl bei einer Polarisation von
  $\SI{0}{\degree}$ ($\sigma$-Übergang) als auch bei einer Polarisation von $\SI{90}{\degree}$ ($\pi$-Übergang)
- Wellenlängenverschiebungen zu erkennen. Daher werden für beide Übergänge separat die Interferenzabstände 
- und die daraus resultierende Wellenlängenverschiebungen bestimmt. Diese sind in Tabelle \ref{tab:blau} 
- aufgeführt. 
+ Wellenlängenverschiebungen zu erkennen. Daher werden für beide Übergänge separat die Interferenzabstände
+ und die daraus resultierende Wellenlängenverschiebungen bestimmt. Diese sind in Tabelle \ref{tab:blau}
+ aufgeführt.
  \begin{table}[H]
     \small
     \centering
-    \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für 
+    \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für
     die ersten 10 Ordnungen.}
     \label{tab:Messwerte}
     \begin{tabular}{cc|cc|cc}
@@ -156,42 +156,42 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- Die Berechnugen der Wellenlängenverschiebungen, sowie die Fehler werden analog zur Rechnung der 
- roten Spektrallinien bestimmt. Da die Maxima bei Betrachtung der blauen Spektrallinien etwas schwieriger 
+ Die Berechnugen der Wellenlängenverschiebungen, sowie die Fehler werden analog zur Rechnung der
+ roten Spektrallinien bestimmt. Da die Maxima bei Betrachtung der blauen Spektrallinien etwas schwieriger
  ist als zuvor , wird hierbei eine Unsicherheit von 5 Pixeln angenommen.
- Eine Mittelung der zuvor berechneten Wellenlängen ergibt 
+ Eine Mittelung der zuvor berechneten Wellenlängen ergibt
  \begin{equation}
-    \delta \lambda_\mathrm{blau,\sigma} = \SI{7,19(53)}{\pico\meter} 
+    \delta \lambda_\mathrm{blau,\sigma} = \SI{7,19(53)}{\pico\meter}
  \end{equation}
- und 
+ und
  \begin{equation}
-    \delta \lambda_\mathrm{blau,\pi} = \SI{5,51(51)}{\pico\meter}. 
+    \delta \lambda_\mathrm{blau,\pi} = \SI{5,51(51)}{\pico\meter}.
  \end{equation}
 
  \subsection{Bestimmung der Landé-Faktoren}
- Mithilfe der zuvor berechneten Wellenlängenverschiebungen können im Zusammenhang mit der Magnetfeldeichung 
- die Landé-Faktoren der einzelnen Übergange bestimmt werden. Da sich die Photonenenergie nicht linear mit der 
- Wellenlänge verhält, wird zunächst der Zusammenhang 
+ Mithilfe der zuvor berechneten Wellenlängenverschiebungen können im Zusammenhang mit der Magnetfeldeichung
+ die Landé-Faktoren der einzelnen Übergange bestimmt werden. Da sich die Photonenenergie nicht linear mit der
+ Wellenlänge verhält, wird zunächst der Zusammenhang
  \begin{equation}
      \frac{\delta E}{\delta \lambda} = \frac{\delta}{\delta \lambda} \frac{hc}{\lambda} = -\frac{hc}{\lambda}
  \end{equation} \noindent
- hergestellt. Daraus folgt 
+ hergestellt. Daraus folgt
  \begin{equation}
      |\delta E| = \frac{hc}{\lambda} |\delta \lambda|.
- \label{eqn:1} 
+ \label{eqn:1}
  \end{equation} \noindent
- Somit gilt durch Einsetzen der Gleichung \ref{eqn:1} in Formel \ref{eqn:} 
+ Somit gilt durch Einsetzen der Gleichung \ref{eqn:1} in Formel \ref{eqn:}
  \begin{equation}
      g = |\delta \lambda_i| \frac{hc}{\mu_\text{B} B_i \lambda_i^2}
  \end{equation}
-für den normalen Zeeman-Effekt, sowie 
+für den normalen Zeeman-Effekt, sowie
 \begin{equation}
     g_ij = |\delta \lambda_i| \frac{hc}{\mu_\text{B} B_i \lambda_i^2}
 \end{equation}
-für den anormalen Zeeman-Effekt. 
-In Tabelle \ref{tab:lande} sind die verwendeten Stromstärken und die daraus errechneten Magnetfeldstärken 
-aufgeführt. Zusätzlich enthält sie die damit berechneten Landé-Faktoren für die drei untersuchten 
-Übergange der Cadmium-Lampe. 
+für den anormalen Zeeman-Effekt.
+In Tabelle \ref{tab:lande} sind die verwendeten Stromstärken und die daraus errechneten Magnetfeldstärken
+aufgeführt. Zusätzlich enthält sie die damit berechneten Landé-Faktoren für die drei untersuchten
+Übergange der Cadmium-Lampe.
 \begin{table}[H]
     \centering
     \caption{Aufführung der berechneten Landé-Faktoren zusammen mit den verwendeten Stromstärken bzw. Magnetfeldstärken und den Wellenlängenverschiebungen.}
@@ -206,13 +206,12 @@ aufgeführt. Zusätzlich enthält sie die damit berechneten Landé-Faktoren für
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- Dabei berechnet sich der Fehler auf das Magnetfeld nach Gaußscher Fehlerfortpflanzung mit 
+ Dabei berechnet sich der Fehler auf das Magnetfeld nach Gaußscher Fehlerfortpflanzung mit
  \begin{equation}
      \Delta B = \sqrt{(I\cdot \Delta a)^2 + \Delta b^2} .
  \end{equation}
- Ebenfalls über die Gaußsche Fehlerfortpflanzung gilt 
+ Ebenfalls über die Gaußsche Fehlerfortpflanzung gilt
  \begin{equation}
-    \Delta g = \frac{hc}{\lambda^2 \mu_\text{B}} \sqrt{(\frac{1}{B} \cdot \Delta \delta \lambda)^2 + (\frac{\delta \lambda}{B^2}\cdot \Delta B)^2} 
+    \Delta g = \frac{hc}{\lambda^2 \mu_\text{B}} \sqrt{(\frac{1}{B} \cdot \Delta \delta \lambda)^2 + (\frac{\delta \lambda}{B^2}\cdot \Delta B)^2}
  \end{equation} \noindent
  für den Fehler auf die berechneten Landé-Faktoren.
-
