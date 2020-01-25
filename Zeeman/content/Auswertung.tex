@@ -65,28 +65,28 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  \begin{figure}[H]
      \centering
      \includegraphics[width=0.8\textwidth]{images/zebraplot_rot.jpg}
-     \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschidelichen
+     \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschiedlichen
      Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten
-     wird ein Magnetfeld von ca $\SI{1234}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
+     wird ein Magnetfeld von ca $\SI{692}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
      auf $\SI{90}{\degree}$ (Unten) umgestellt.}
      \label{fig:rot}
  \end{figure} \noindent
  Zu sehen sind die unterschiedlichen Interferenzen unter verschiedenen äußeren Einflüssen. Das obere der drei
  Bilder zeigt die Spektrallinie ohne den Einfluss eines Magnetfeldes und einer Polarisation. Der Ausschnitt in
- der Mitte zeigt die Spektrallinienaufspaltung bei einem Magnetfeld der Stärke $\SI{12345}{\milli\tesla}$ und
+ der Mitte zeigt die Spektrallinienaufspaltung bei einem Magnetfeld der Stärke $\SI{692}{\milli\tesla}$ und
  einer Polarisation von $\SI{0}{\degree}$. Dieser Übergang entspricht dem $\sigma$-Übergang. Das untere
- Bild zeigt dementsprechend die $\pi$-Übergange. Dabei liegt ebenfalls ein Magnetfeld mit $\SI{12345}{\milli\tesla}$
+ Bild zeigt dementsprechend die $\pi$-Übergange. Dabei liegt ebenfalls ein Magnetfeld von $\SI{692}{\milli\tesla}$
  an, die Polarisation entspricht jedoch $\SI{90}{\degree}$. Bei diesem Übergang kommt es jedoch zu keiner
  Auspaltung, da hier $\Delta m = 0$ vorliegt und somit nach Gleichung \ref{egn:E_normal} keine Energiedifferenz
  entsteht. \\
- Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes die Anzahl der Pixel bestimmt.
+ Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes als ein Pixelanzahl bestimmt.
  Die auf diese Weise bestimmten Werte sind in Tabelle \ref{tab:rot} zusammen mit den entsprechend berechneten
  Wellenlängenverschiebungen, die mit Formel \ref{eqn:WV} berechnet werden, aufgeführt.
  \begin{table}[H]
     \centering
     \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für
     die ersten 10 Ordnungen.}
-    \label{tab:Messwerte}
+    \label{tab:rot}
     \begin{tabular}{c|ccc}
       \toprule
       Ordnung & $\Delta s_\text{rot}$ \, / \, \# Pixel & $\delta s_\text{rot}$ \, / \, \# Pixel & $\delta \lambda_\mathrm{rot,\sigma} \, / \, \si{\pico\meter}$ \\
@@ -107,7 +107,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  Da die Abstände der Maxima mit dem Auge abgeschätzt werden, werden sie mit einer Unsicherheit von 3 Pixeln
  betrachtet. Damit ergibt sich für den Gesamtfehler auf die Wellenlängenverschiebung nach Gauß
  \begin{equation}
-     \Delta (\delta \lambda) = \frac{1}{2} \Delta \lambda \sqrt{\frac{1}{\Delta s^2} \cdot \Delta (\delta s)^2 + (\frac{\delta s}{(\Delta s)^2})^2 \cdot \Delta (\Delta s)^2}.
+     \Delta (\delta \lambda) = \frac{1}{2} \Delta \lambda \sqrt{\frac{1}{\Delta s^2} \cdot \Delta (\delta s)^2 + \left(\frac{\delta s}{(\Delta s)^2}\right)^2 \cdot \Delta (\Delta s)^2}.
  \end{equation} \noindent
  Aus den berechneten Werten für die Wellenlängenverschiebung ergibt sich durch Berechnung des Mittelwerts
  \begin{equation}
@@ -122,9 +122,9 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
      \centering
      \includegraphics[width=0.8\textwidth]{images/zebraplot_blau.jpg}
      \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschiedlichen
-     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten
-     wird ein Magnetfeld von ca $\SI{1234}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
-     auf $\SI{90}{\degree}$ (Unten) umgestellt.}
+     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. In dem mittleren Bild 
+     liegt ein Magnetfeld von $\SI{372}{\milli\tesla}$ und eine Polarisation von $\SI{0}{\degree}$ vor. Im 
+     unteren Bild wird die Polarisation auf $\SI{90}{\degree}$ mit $\SI{1181}{\milli\tesla}$ eingestellt.}
      \label{fig:blau}
  \end{figure} \noindent
  Da in diesem Fall der anormale Zeeman-Effekt vorliegt, sind sowohl bei einer Polarisation von
@@ -137,7 +137,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
     \centering
     \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für
     die ersten 10 Ordnungen.}
-    \label{tab:Messwerte}
+    \label{tab:blau}
     \begin{tabular}{cc|cc|cc}
       \toprule
       Ordnung & $\Delta s_\text{blau}$ \, / \, \#Pixel & $\delta s_\mathrm{blau, \sigma}$ \, / \, \#Pixel & $\delta \lambda_\mathrm{blau,\sigma} \, / \, \si{\pico\meter}$
