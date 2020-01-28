@@ -9,10 +9,10 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
 \begin{table}[H]
     \centering
     \caption{Aufgenommene Werte der Magnetfeldstärke in Abhängigkeit der Stromstärke.}
-    \label{tab:Messwerte}
+    \label{Tab:Messwerte}
     \begin{tabular}{cc}
       \toprule
-      Stromstärke I\, / \, $\si{\ampere}$ & B-Feld \, / \, $\si{\milli\tesla}$  \\
+      Stromstärke I / $\si{\ampere}$ & B-Feld / $\si{\milli\tesla}$  \\
       \midrule
       0 &    5 \\
       1 &   78 \\
@@ -77,11 +77,11 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  einer Polarisation von $\SI{0}{\degree}$. Dieser Übergang entspricht dem $\sigma$-Übergang. Das untere
  Bild zeigt dementsprechend die $\pi$-Übergange. Dabei liegt ebenfalls ein Magnetfeld von $\SI{692}{\milli\tesla}$
  an, die Polarisation entspricht jedoch $\SI{90}{\degree}$. Bei diesem Übergang kommt es jedoch zu keiner
- Auspaltung, da hier $\Delta m = 0$ vorliegt und somit nach Gleichung \ref{egn:E_normal} keine Energiedifferenz
+ Auspaltung, da hier $\Delta m = 0$ vorliegt und somit nach Gleichung \eqref{egn:E_normal} keine Energiedifferenz
  entsteht. \\
  Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes als ein Pixelanzahl bestimmt.
  Die auf diese Weise bestimmten Werte sind in Tabelle \ref{tab:rot} zusammen mit den entsprechend berechneten
- Wellenlängenverschiebungen, die mit Formel \ref{eqn:WV} berechnet werden, aufgeführt.
+ Wellenlängenverschiebungen, die mit Formel \eqref{eqn:WV} berechnet werden, aufgeführt.
  \begin{table}[H]
     \centering
     \caption{Die für die Maxima bestimmten Pixelabstände und die darausberechneten Wellenlängenverschiebungen für
@@ -91,27 +91,27 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
       \toprule
       Ordnung & $\Delta s_\text{rot}$ \, / \, \# Pixel & $\delta s_\text{rot}$ \, / \, \# Pixel & $\delta \lambda_\mathrm{rot,\sigma} \, / \, \si{\pico\meter}$ \\
       \midrule
-       1 & 33 & 16 & 11,88 \pm 2,48\\
-       2 & 35 & 17 & 11,90 \pm 2,33\\
-       3 & 34 & 16 & 11,53 \pm 2,39\\
-       4 & 32 & 15 & 11,48 \pm 2,54\\
-       5 & 34 & 15 & 10,81 \pm 2,36\\
-       6 & 33 & 16 & 11,88 \pm 2,48\\
-       7 & 31 & 16 & 12,65 \pm 2,67\\
-       8 & 33 & 18 & 13,36 \pm 2,54\\
-       9 & 34 & 18 & 12,97 \pm 2,45\\
-      10 & 31 & 15 & 11,85 \pm 2,63\\
+       1 & 33 \pm 3 & 16 \pm 3 & 11,88 \pm 2,48\\
+       2 & 35 \pm 3 & 17 \pm 3 & 11,90 \pm 2,33\\
+       3 & 34 \pm 3 & 16 \pm 3 & 11,53 \pm 2,39\\
+       4 & 32 \pm 3 & 15 \pm 3 & 11,48 \pm 2,54\\
+       5 & 34 \pm 3 & 15 \pm 3 & 10,81 \pm 2,36\\
+       6 & 33 \pm 3 & 16 \pm 3 & 11,88 \pm 2,48\\
+       7 & 31 \pm 3 & 16 \pm 3 & 12,65 \pm 2,67\\
+       8 & 33 \pm 3 & 18 \pm 3 & 13,36 \pm 2,54\\
+       9 & 34 \pm 3 & 18 \pm 3 & 12,97 \pm 2,45\\
+      10 & 31 \pm 3 & 15 \pm 3 & 11,85 \pm 2,63\\
       \bottomrule
   \end{tabular}
  \end{table} \noindent
  Da die Abstände der Maxima mit dem Auge abgeschätzt werden, werden sie mit einer Unsicherheit von 3 Pixeln
- betrachtet. Damit ergibt sich für den Gesamtfehler auf die Wellenlängenverschiebung nach Gauß
+ betrachtet. Damit ergibt sich für die Unsicherheit auf die Wellenlängenverschiebung nach Gauß
  \begin{equation}
-     \Delta (\delta \lambda) = \frac{1}{2} \Delta \lambda \sqrt{\frac{1}{\Delta s^2} \cdot \Delta (\delta s)^2 + \left(\frac{\delta s}{(\Delta s)^2}\right)^2 \cdot \Delta (\Delta s)^2}.
+     \sigma_{\delta \lambda} = \frac{1}{2} \Delta \lambda_\text{D} \sqrt{\frac{1}{\Delta s^2} \cdot \sigma_{\delta s}^2 + \left(\frac{\delta s}{(\Delta s)^2}\right)^2 \cdot \sigma_{\Delta s}^2}\, .
  \end{equation} \noindent
  Aus den berechneten Werten für die Wellenlängenverschiebung ergibt sich durch Berechnung des Mittelwerts
  \begin{equation}
-     \delta \lambda = \SI{12.03(79)}{\pico\meter}.
+     \delta \lambda = \SI{12.03(79)}{\pico\meter} \, .
  \end{equation}
 
 
@@ -122,8 +122,8 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
      \centering
      \includegraphics[width=0.8\textwidth]{images/zebraplot_blau.jpg}
      \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschiedlichen
-     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. In dem mittleren Bild 
-     liegt ein Magnetfeld von $\SI{372}{\milli\tesla}$ und eine Polarisation von $\SI{0}{\degree}$ vor. Im 
+     Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. In dem mittleren Bild
+     liegt ein Magnetfeld von $\SI{372}{\milli\tesla}$ und eine Polarisation von $\SI{0}{\degree}$ vor. Im
      unteren Bild wird die Polarisation auf $\SI{90}{\degree}$ mit $\SI{1181}{\milli\tesla}$ eingestellt.}
      \label{fig:blau}
  \end{figure} \noindent
@@ -143,20 +143,20 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
       Ordnung & $\Delta s_\text{blau}$ \, / \, \#Pixel & $\delta s_\mathrm{blau, \sigma}$ \, / \, \#Pixel & $\delta \lambda_\mathrm{blau,\sigma} \, / \, \si{\pico\meter}$
       & $\delta s_\mathrm{blau, \pi}$ \, / \, \#Pixel & $\delta \lambda_\mathrm{blau,\pi} \, / \, \si{\pico\meter}$  \\
       \midrule
-       1 & 47 & 26 & 7,47 \pm 1,64 & 16 & 4,60 \pm 1,52\\
-       2 & 48 & 26 & 7,31 \pm 1,60 & 19 & 5,34 \pm 1,56\\
-       3 & 50 & 24 & 6,48 \pm 1,50 & 20 & 5,40 \pm 1,45\\
-       4 & 47 & 25 & 7,18 \pm 1,63 & 19 & 5,46 \pm 1,55\\
-       5 & 45 & 23 & 6,90 \pm 1,68 & 19 & 5,70 \pm 1,63\\
-       6 & 46 & 26 & 7.63 \pm 1,69 & 17 & 4,99 \pm 1,56\\
-       7 & 45 & 23 & 6,90 \pm 1,68 & 21 & 6,30 \pm 1,66\\
-       8 & 43 & 25 & 7,85 \pm 1,82 & 16 & 5,02 \pm 1,67\\
-       9 & 44 & 22 & 6,75 \pm 1,72 & 20 & 6,14 \pm 1,69\\
-      10 & 42 & 23 & 7,39 \pm 1,83 & 19 & 6,11 \pm 1,76\\
+       1 & 47 \pm 5 & 26 \pm 5 & 7,47 \pm 1,64 & 16 \pm 5 & 4,60 \pm 1,52\\
+       2 & 48 \pm 5 & 26 \pm 5 & 7,31 \pm 1,60 & 19 \pm 5 & 5,34 \pm 1,56\\
+       3 & 50 \pm 5 & 24 \pm 5 & 6,48 \pm 1,50 & 20 \pm 5 & 5,40 \pm 1,45\\
+       4 & 47 \pm 5 & 25 \pm 5 & 7,18 \pm 1,63 & 19 \pm 5 & 5,46 \pm 1,55\\
+       5 & 45 \pm 5 & 23 \pm 5 & 6,90 \pm 1,68 & 19 \pm 5 & 5,70 \pm 1,63\\
+       6 & 46 \pm 5 & 26 \pm 5 & 7.63 \pm 1,69 & 17 \pm 5 & 4,99 \pm 1,56\\
+       7 & 45 \pm 5 & 23 \pm 5 & 6,90 \pm 1,68 & 21 \pm 5 & 6,30 \pm 1,66\\
+       8 & 43 \pm 5 & 25 \pm 5 & 7,85 \pm 1,82 & 16 \pm 5 & 5,02 \pm 1,67\\
+       9 & 44 \pm 5 & 22 \pm 5 & 6,75 \pm 1,72 & 20 \pm 5 & 6,14 \pm 1,69\\
+      10 & 42 \pm 5 & 23 \pm 5 & 7,39 \pm 1,83 & 19 \pm 5 & 6,11 \pm 1,76\\
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- Die Berechnugen der Wellenlängenverschiebungen, sowie die Fehler werden analog zur Rechnung der
+ Die Berechnugen der Wellenlängenverschiebungen, sowie die Unsicherheit werden analog zur Rechnung der
  roten Spektrallinien bestimmt. Da die Maxima bei Betrachtung der blauen Spektrallinien etwas schwieriger
  ist als zuvor , wird hierbei eine Unsicherheit von 5 Pixeln angenommen.
  Eine Mittelung der zuvor berechneten Wellenlängen ergibt
@@ -180,7 +180,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
      |\delta E| = \frac{hc}{\lambda} |\delta \lambda|.
  \label{eqn:1}
  \end{equation} \noindent
- Somit gilt durch Einsetzen der Gleichung \ref{eqn:1} in Formel \ref{eqn:}
+ Somit gilt durch Einsetzen der Gleichung \ref{eqn:1} in Formel \ref{eqn:Melinaistdoof}
  \begin{equation}
      g = |\delta \lambda_i| \frac{hc}{\mu_\text{B} B_i \lambda_i^2}
  \end{equation}
@@ -206,12 +206,12 @@ aufgeführt. Zusätzlich enthält sie die damit berechneten Landé-Faktoren für
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- Dabei berechnet sich der Fehler auf das Magnetfeld nach Gaußscher Fehlerfortpflanzung mit
+ Dabei berechnet sich die Unsicherheit auf das Magnetfeld nach Gaußscher Fehlerfortpflanzung mit
  \begin{equation}
-     \Delta B = \sqrt{(I\cdot \Delta a)^2 + \Delta b^2} .
+     \sigma_B = \sqrt{(I\cdot \sigma_a)^2 + \sigma_b^2} .
  \end{equation}
  Ebenfalls über die Gaußsche Fehlerfortpflanzung gilt
  \begin{equation}
-    \Delta g = \frac{hc}{\lambda^2 \mu_\text{B}} \sqrt{(\frac{1}{B} \cdot \Delta \delta \lambda)^2 + (\frac{\delta \lambda}{B^2}\cdot \Delta B)^2}
+    \sigma_g = \frac{hc}{\lambda^2 \mu_\text{B}} \sqrt{\left(\frac{1}{B} \cdot \sigma_{\delta \lambda}\right)^2 + \left(\frac{\delta \lambda}{B^2}\cdot \sigma_B \right)^2}
  \end{equation} \noindent
- für den Fehler auf die berechneten Landé-Faktoren.
+ für die Unsicherheit auf die berechneten Landé-Faktoren.
