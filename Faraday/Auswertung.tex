@@ -8,11 +8,11 @@ Zunächst werden die aufgenommen Daten zur Bestimmung des Magnetfeldes untersuch
 sind in Tabelle \ref{tab:MF_Messung} aufgeführt.
 \begin{table}[H]
     \centering
-    \caption{Aufgenommene Werte bei der Bestimmung des Magnetfeldes mithilfe einer Hallsonde.}
+    \caption{Aufgenommene Werte bei der Bestimmung des Magnetfeldes mithilfe einer Hallsonde. Dabei sind die Werte der Postion $x$ die der Hallsonde auf einer Schiebeskala und ihre absoluten Beträge nicht von Bedeutung.}
     \label{tab:MF_Messung}
     \begin{tabular}{cc}
       \toprule
-      Position x\, / \, $\si{\milli\meter}$ & B-Feld \, / \, $\si{\milli\tesla}$  \\
+      Position $x$/$\si{\milli\meter}$ & B-Feld / $\si{\milli\tesla}$  \\
       \midrule
       115 & 50  \\
       120 & 180 \\
@@ -31,14 +31,14 @@ sind in Tabelle \ref{tab:MF_Messung} aufgeführt.
       \bottomrule
   \end{tabular}
  \end{table} \noindent
- In Abbildung \ref{fig:MF_Messung} sind die Magnetfeldstärken gegen die Position x aufgetragen.
+ In Abbildung \ref{fig:MF_Messung} sind die Magnetfeldstärken gegen die Position $x$ aufgetragen. Dabei wurde die Positionsskala neu skaliert, um eine Position im Luftspalt anzugeben.
  \begin{figure}[H]
      \centering
      \includegraphics[width=0.8\textwidth]{Auswertung/Plots/Magnetfeldstärke.png}
      \caption{Darstellung der aufgenommenen Werte des Magnetfeldes aufgetragen gegen die Position x der Hallsonde.}
      \label{fig:MF_Messung}
  \end{figure} \noindent
- Die Position einer Probe wird auf $\SI{132}{\milli\meter}$ bestimmt. Dabei ist jedoch zu bedenken,
+ Die Position einer Probe wird auf $\SI{16}{\milli\meter}$ im Luftspalt bestimmt. Dabei ist jedoch zu bedenken,
  dass die Proben unterschiedliche Dicken aufweisen.
  Somit wird in den folgenden Teilen der Auswertung für das vorherrschende Magnetfeld eine Stärke von
  \begin{align*}
@@ -49,7 +49,7 @@ sind in Tabelle \ref{tab:MF_Messung} aufgeführt.
  \subsection{Messung der hochreinen GaAs-Probe}
  Als Referenzprobe wird eine hochreine, undotierte GaAs-Probe untersucht.
  Mit einer bekannten Dicke der Probe von $\SI{5.11}{\milli\meter}$ kann zu jeder der untersuchten
- Wellenlängen der normierte Drehwinkel bestimmt werden. Diese sind zusammen mit den gemessenen Werten sowie den
+ Wellenlängen der normierte Drehwinkel bestimmt werden. Diese sind zusammen mit den gemessenen Werten, sowie den
  entsprechenden Wellenlängen in Tabelle \ref{tab:hr_Messung} aufgeführt.
  \begin{table}[H]
     \centering
@@ -143,7 +143,7 @@ Abhängigkeit der quadratischen Wellenlänge dargestellt.
   \includegraphics[width=0.8\textwidth]{Auswertung/Plots/Fit_eff_mass.pdf}
   \caption{Darstellung der berechneten normierten Rotationswinkel für freie Elektronen der beiden untersuchten
   dotierten GaAs-Proben in Abhängigkeit des Wellenlängenquadrats. Zudem sind die linearen
-  Ausgleichgerade abgebildet.}
+  Ausgleichgeraden abgebildet.}
   \label{fig:beideProben}
 \end{figure} \noindent
 Für beide Proben wird eine Ausgleichgerade der
@@ -151,26 +151,26 @@ Form
 \begin{equation*}
   \Delta \Phi_\text{norm.} = A \lambda^2
 \end{equation*} \noindent
-an die Werte angepasst. Daraus ergeben sich für die erste Probe für die Parameter
+an die Werte angepasst. Daraus ergeben sich für die erste Probe der Parameter
 \begin{align*}
   A_\text{Probe1} &= \SI{6.5(23)e3}{\radian\per\cubic\milli\meter}
   %b_\text{Probe1} &= \SI{0.007(26)}{\radian\per\milli\meter}.
 \end{align*} \noindent
-Analog ergeben sich
+Analog ergibt sich
 \begin{align*}
   A_\text{Probe2} &= \SI{1.41(10)e4}{\radian\per\cubic\milli\meter}
    %b_\text{Probe2} &= \SI{0.003(10)}{\radian\per\milli\meter}
 \end{align*} \noindent
-für die zweite untersuchte dotierte Probe. Daraus lassen sich mithilfe von Formel \ref{eqn:effmass}
-die effektiven Massen, sowie das Verhältnis zur Elektronenmasse bestimmen. Somit ergibt sich
+für die zweite untersuchte dotierte Probe. Daraus lassen sich mithilfe von Formel \eqref{eqn:effmass}
+die effektiven Massen, sowie ihr Verhältnis zur Elektronenmasse bestimmen. Somit ergibt sich
 \begin{align*}
-  m_\text{eff. Probe1}^* &= \SI{5.2(10)e-32}{\kilo\gram} \\
+  m_\text{eff. Probe1}^* &= \SI{5.2(10)e-32}{\kilo\gram}\, , \\
   V_1 &= \frac{m_\text{eff. Probe1}^*}{m_\text{e}} = 0.057 \pm 0.011
 \end{align*}
 für Probe 1. Analog ergibt sich für Probe 2
 \begin{align*}
-  m_\text{eff. Probe2}^* &= \SI{5.39(19)e-32}{\kilo\gram} \\
-  V_2 &= \frac{m_\text{eff. Probe2}^*}{m_\text{e}} = 0.059 \pm 0.002.
+  m_\text{eff. Probe2}^* &= \SI{5.39(19)e-32}{\kilo\gram} \, , \\
+  V_2 &= \frac{m_\text{eff. Probe2}^*}{m_\text{e}} = 0.059 \pm 0.002 \,.
 \end{align*} \noindent
 
 Für die Mittelwerte der effektiven Masse und des Verhältnis zur Elektronenmasse folgt somit
