@@ -1,6 +1,6 @@
 \section{Theoretische Grundlagen}
 Ziel dieses Versuches ist es, mithilfe des Faraday-Effektes, die effektive Masse der Leitungselektronen in
-Gallium-Arsenit-Proben zu bestimmen. \\
+Gallium-Arsenid-Proben zu bestimmen. \\
 \\
 Der Faraday-Effekt, der auch als Faraday-Rotation bezeichnet wird, beschreibt die Drehung der
 Polarisationsrichtung einer linear polarisierten Welle bei dem Durchgang durch ein Medium
@@ -27,7 +27,7 @@ Es wird deutlich, dass bei einem Isolator, der auf der linken Seite abgebildet i
 dem Leitungs- und dem Valenzband vorliegt. Dieser wird als Bandlücke bezeichnet. Bei einem Isolator ist diese
 Bandlücke zu groß, um sie allein mithilfe von thermischer Energie überwinden zu können. Das hat zur Folge,
 dass keine Elektronen in das Leitungsband gehoben werden und somit eine elektrische Leitfähigkeit erzeugen könnten.\\
-Bei einem Halbleiter, wie es auch Gallium-Arsenit (\ce{GaAs}) ist, liegt ebenfalls eine Bandlücke vor. Diese ist, im Vergleich
+Bei einem Halbleiter, wie es auch Gallium-Arsenid (\ce{GaAs}) ist, liegt ebenfalls eine Bandlücke vor. Diese ist, im Vergleich
 zu der eines Isolators, klein. Somit können hier mithilfe von thermischer Energie Elektronen in das Leitungsband
 gehoben werden und das entsprechende Material wird leitend. Mithilfe von Dotierungen können die Bandlücken
 von Halbleitern verkleinert werden. Dazu werden Ladungsträger in das Material eingefügt. Dabei wird zwischen
@@ -49,10 +49,12 @@ Für diese freien Ladungsträger kann, unter harmonischer Näherung der Bandstru
 \end{equation}
 definiert werden.
 Eine solche Näherung ist gerade für \ce{GaAs} sinnvoll, da das Leitungsband für kleine $k$ fast exakt harmonisch ist.
+Im Allgemeinen kann die effektive Masse in jede Raumrichtung bestimmt werden, indem nach der jeweiligen Raumrichtung $k_\text{i}$ differenziert wird.
+Durch die Symmetrie von \ce{GaAs} ist die effektive Masse jedoch in alle Raumrichtungen gleich.
 Ein Ausschnitt der Bandstruktur von \ce{GaAs} ist in Abbildung \ref{fig:Band_GaAs} abgebildet.
 Es ist zu sehen, dass im Valenzband drei Hochpunkte für die Bänder V$_1$, V$_2$ und V$_3$ existieren.
 Dadurch ergeben sich dementsprechend auch drei unterschiedliche effektive Massen für die Löcher im Valenzband.\par
-Im Leitungsband existiert nur ein Minima für einen direkten Übergang von Valenz- und Leitungsband.
+Im Leitungsband existiert nur ein Minimum für einen direkten Übergang von Valenz- und Leitungsband.
 
 \begin{figure}[H]
   \centering
@@ -65,14 +67,14 @@ Im Leitungsband existiert nur ein Minima für einen direkten Übergang von Valen
 
 \subsection{Faraday-Effekt}
 Der Faraday-Effekt beschreibt die Drehung der Polarisationsrichtung einer einfallenden linear
-polarisierten Welle unter dem Einfluss eines magnetischen Feldes. Eine linear polarisierte Welle
+polarisierten Welle unter dem Einfluss eines, parallel zur Ausbreitungsrichtung stehenden, magnetischen Feldes. Eine linear polarisierte Welle
 kann als Überlagerung zweier zirkular polarisierter Wellen angenommen werden. Tritt eine solche Welle in
 ein optisch anisotropes Medium, so kommt es aufgrund der verschiedenen Phasenkomponenten der zirkularen
 Komponenten zu einer Drehung der Polarisationsebene. Bei dem Eintritt in das Medium weist die Welle
 lediglich eine Komponente in eine Raumrichtung auf. Nach dem Durchlauf kommt es aufgrund der Drehung
 zusätzlich zu einem Beitrag in eine weitere Raumrichtung. Die Polarisationsrichtung ist somit um den
 Winkel $\theta$ gedreht. Aufgrund der unterschiedlichen Phasengeschwindigkeiten liegen ebenfalls
-unterschiedliche Brechungsindices vor. Aufgrund dessen wird in diesem Zusammenhand auch oftmals von einer
+unterschiedliche Brechungsindices vor. Aufgrund dessen wird in diesem Zusammenhang auch oftmals von einer
 Doppelbrechung gesprochen. Diese entsteht aufgrund der
 Wechselwirkung der Bandelektronen mit den Rümpfen der Atome und
 den elektrische Dipolmomenten der Atome auf den Gitterplätzen des Kristalls. \\
@@ -82,7 +84,7 @@ Die Einträge auf den Nebendiagonalen sind dabei die komplex konjugierten der Ha
 \par
 Der Faraday-Effekt ist jedoch nicht ausschließlich bei den zuvor erwähnten anisotropen Medien zu beobachten.
 Liegt ein Festkörper vor, der ausschließlich Einträge auf der Hauptdiagolen besitzt, findet ein
-Magnetfeld Anwendung. Durch Verwendung diese Magnetfeldes kommt es dazu, dass das Material doppelbrechend wird
+Magnetfeld Anwendung. Durch Verwendung dieses Magnetfeldes kommt es dazu, dass das Material doppelbrechend wird
 und ebenfalls komplex konjugierte Einträge erhält. Daraus folgt, dass der Drehwinkel $\theta$
 proportional zur Flussdichte $B$, der Länge $L$ des Kristalls und zur Anzahl der Ladungsträger pro Volumeneinheit $N$
 ist. Somit ergibt sich
@@ -90,7 +92,9 @@ ist. Somit ergibt sich
     \theta = \frac{e_0^3 \lambda ^2 N L B}{8 \pi^2 \epsilon_0 c^3 (m^*)^2 n}
     \label{eqn:effmass}
 \end{equation} \noindent
-für den Drehwinkel. Außerdem beschreibt $\lambda$ die Wellenlänge und $m^*$ die effektive Masse der
+für den Drehwinkel. 
+Dies gilt unter der Bedingung, dass die Messfrequenz wesentlich größer ist, als die Zyklotronfrequenz und die Resonanzfrequenz der freien Elektronen gleich Null ist.
+Außerdem beschreibt $\lambda$ die Wellenlänge und $m^*$ die effektive Masse der
 Ladungsträger. Diese kommt zum Einsatz, da sie, im Gegensatz zu der Elektronenmasse, die Einflüsse des
 Gitterpotentials im Kristall berücksichtigt. Dazu kommt, dass sie die Ladungsträger wie freie Elektronen bzw.
 Löcher im Vakuum, lediglich mit einer anderen Masse behandelt. Somit ist es mithilfe des Faraday-Effektes und der Bestimmung
