@@ -2,7 +2,7 @@
 Alle Ausgleichsrechnungen werden mit dem Paket \texttt{scipy.optimize.curve\_fit}  aus \texttt{Python 3.7.3} durchgeführt.
 Für Rechnungen mit fehlerbehafteten Größen wird das Paket \texttt{uncertainties} aus \texttt{Python 3.7.3} verwendet.
 
-\subsection{Eichung des Magnetfeldes}
+\subsection{Kalibrierung des Magnetfeldes}
 Im ersten Schritt der Auswertung werden die mit der Hallsonde aufgenommenen Werte für das
 vorliegende Magnetfeld untersucht. Die gemessenen Daten der Stromstärke und die dazugehörige
 Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
@@ -67,7 +67,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
      \includegraphics[width=0.8\textwidth]{images/zebraplot_rot.jpg}
      \caption{Darstellung von Ausschnitten aus den Aufnahmen der Interferenzmuster bei unterschiedlichen
      Einstellungen. Oben sind die Spektrallinien ohne Magnetfeldeinfluss zu sehen. Mittig und unten
-     wird ein Magnetfeld von ca $\SI{692}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
+     wird ein Magnetfeld von ca. $\SI{692}{\milli\tesla}$ angelegt und die Polarisation von $\SI{0}{\degree}$ (Mitte)
      auf $\SI{90}{\degree}$ (Unten) umgestellt.}
      \label{fig:rot}
  \end{figure} \noindent
@@ -75,11 +75,11 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  Bilder zeigt die Spektrallinie ohne den Einfluss eines Magnetfeldes und einer Polarisation. Der Ausschnitt in
  der Mitte zeigt die Spektrallinienaufspaltung bei einem Magnetfeld der Stärke $\SI{692}{\milli\tesla}$ und
  einer Polarisation von $\SI{0}{\degree}$. Dieser Übergang entspricht dem $\sigma$-Übergang. Das untere
- Bild zeigt dementsprechend die $\pi$-Übergange. Dabei liegt ebenfalls ein Magnetfeld von $\SI{692}{\milli\tesla}$
+ Bild zeigt dementsprechend die $\pi$-Übergänge. Dabei liegt ebenfalls ein Magnetfeld von $\SI{692}{\milli\tesla}$
  an, die Polarisation entspricht jedoch $\SI{90}{\degree}$. Bei diesem Übergang kommt es jedoch zu keiner
  Auspaltung, da hier $\Delta m = 0$ vorliegt und somit nach Gleichung \eqref{egn:E_normal} keine Energiedifferenz
  entsteht. \\
- Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes als ein Pixelanzahl bestimmt.
+ Die Abstände zwischen den Maxima werden mithilfe eines Bildbearbeitungsprogammes in Form von einer Pixelanzahl bestimmt.
  Die auf diese Weise bestimmten Werte sind in Tabelle \ref{tab:rot} zusammen mit den entsprechend berechneten
  Wellenlängenverschiebungen, die mit Formel \eqref{eqn:WV} berechnet werden, aufgeführt.
  \begin{table}[H]
@@ -89,7 +89,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
     \label{tab:rot}
     \begin{tabular}{c|ccc}
       \toprule
-      Ordnung & $\Delta s_\text{rot}$ \, / \, \# Pixel & $\delta s_\text{rot}$ \, / \, \# Pixel & $\delta \lambda_\mathrm{rot,\sigma} \, / \, \si{\pico\meter}$ \\
+      Ordnung & $\Delta s_\text{rot}$ \, / \, \# Pixel & $\delta s_\text{rot}$ \, / \, \# Pixel & $\delta \lambda_{\text{rot},\sigma} \, / \, \si{\pico\meter}$ \\
       \midrule
        1 & 33 \pm 3 & 16 \pm 3 & 11,88 \pm 2,48\\
        2 & 35 \pm 3 & 17 \pm 3 & 11,90 \pm 2,33\\
@@ -111,7 +111,7 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  \end{equation} \noindent
  Aus den berechneten Werten für die Wellenlängenverschiebung ergibt sich durch Berechnung des Mittelwerts
  \begin{equation}
-     \delta \lambda = \SI{12.03(79)}{\pico\meter} \, .
+     \delta \lambda = \SI{12.0(8)}{\pico\meter} \, .
  \end{equation}
 
 
@@ -140,8 +140,8 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
     \label{tab:blau}
     \begin{tabular}{cc|cc|cc}
       \toprule
-      Ordnung & $\Delta s_\text{blau}$ \, / \, \#Pixel & $\delta s_\mathrm{blau, \sigma}$ \, / \, \#Pixel & $\delta \lambda_\mathrm{blau,\sigma} \, / \, \si{\pico\meter}$
-      & $\delta s_\mathrm{blau, \pi}$ \, / \, \#Pixel & $\delta \lambda_\mathrm{blau,\pi} \, / \, \si{\pico\meter}$  \\
+      Ordnung & $\Delta s_\text{blau}$ \, / \, \#Pixel & $\delta s_{\text{blau}, \sigma}$ \, / \, \#Pixel & $\delta \lambda_{\text{blau},\sigma} \, / \, \si{\pico\meter}$
+      & $\delta s_{\text{blau}, \pi}$ \, / \, \#Pixel & $\delta \lambda_{\text{blau},\pi} \, / \, \si{\pico\meter}$  \\
       \midrule
        1 & 47 \pm 5 & 26 \pm 5 & 7,47 \pm 1,64 & 16 \pm 5 & 4,60 \pm 1,52\\
        2 & 48 \pm 5 & 26 \pm 5 & 7,31 \pm 1,60 & 19 \pm 5 & 5,34 \pm 1,56\\
@@ -161,23 +161,23 @@ Magnetfeldstärke sind in Tabelle \ref{Tab:Messwerte} aufgeführt.
  ist als zuvor , wird hierbei eine Unsicherheit von 5 Pixeln angenommen.
  Eine Mittelung der zuvor berechneten Wellenlängen ergibt
  \begin{equation}
-    \delta \lambda_\mathrm{blau,\sigma} = \SI{7,19(53)}{\pico\meter}
+    \delta \lambda_{\text{blau},\sigma} = \SI{7,2(5)}{\pico\meter}
  \end{equation}
  und
  \begin{equation}
-    \delta \lambda_\mathrm{blau,\pi} = \SI{5,51(51)}{\pico\meter}.
+    \delta \lambda_{\text{blau},\pi} = \SI{5,5(5)}{\pico\meter}.
  \end{equation}
 
  \subsection{Bestimmung der Landé-Faktoren}
- Mithilfe der zuvor berechneten Wellenlängenverschiebungen können im Zusammenhang mit der Magnetfeldeichung
+ Mithilfe der zuvor berechneten Wellenlängenverschiebungen können im Zusammenhang mit der Magnetfeldkalibrierung
  die Landé-Faktoren der einzelnen Übergange bestimmt werden. Da sich die Photonenenergie nicht linear mit der
  Wellenlänge verhält, wird zunächst der Zusammenhang
  \begin{equation}
-     \frac{\delta E}{\delta \lambda} = \frac{\delta}{\delta \lambda} \frac{hc}{\lambda} = -\frac{hc}{\lambda}
+     \frac{\delta E}{\delta \lambda} = \frac{\delta}{\delta \lambda} \frac{hc}{\lambda} = -\frac{hc}{\lambda^2}
  \end{equation} \noindent
  hergestellt. Daraus folgt
  \begin{equation}
-     |\delta E| = \frac{hc}{\lambda} |\delta \lambda|.
+     |\delta E| = \frac{hc}{\lambda^2} |\delta \lambda|.
  \label{eqn:1}
  \end{equation} \noindent
  Somit gilt durch Einsetzen der Gleichung \ref{eqn:1} in Formel \ref{eqn:Melinaistdoof}
