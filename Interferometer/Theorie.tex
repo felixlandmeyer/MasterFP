@@ -38,8 +38,9 @@ Das Herzstück des Sagnac-Interferometers bildet jedoch ein \textit{Polarizing B
 \begin{wrapfigure}[15]{r}{.4\textwidth}
 \includegraphics[width = .3\textwidth]{bilder/sketch-polarizing-cube-beamsplitter.png}
 \caption{Schematische Zeichnung eines PBSC und die Polarisationsrichtungen des Lichts \cite{PBSC}.}
+\label{fig:PBSC}
 \end{wrapfigure}
-Dieser transmittiert Licht, welches parallel zur horizontalen Achse des PBSC polarisiert ist und reflektiert Licht, welches sekrecht zur vertikalen Achse des PBSC polarisiert ist (vlg. Abbildung \ref{fig:PBSC}).
+Dieser transmittiert Licht, welches parallel zur horizontalen Achse des PBSC polarisiert ist und reflektiert Licht, welches in der horizontalen Ebene (senkrecht zur vertikalen Achse des PBSC) polarisiert ist (vlg. Abbildung \ref{fig:PBSC}).
 Daher muss für die weitere Betrachtung die Polarisationsrichtung des, auf den PBSC treffenden, Lichtes beachtet werden.
 Linear polarisiertes Licht $E$, dessen Polarisationsrichtung den Winkel $\phi$ zur horizontalen Achse des PBSC aufweist, wird durch diesen in den transmittieren Anteil
 \begin{equation*}
@@ -72,15 +73,15 @@ Es wird schnell ersichtlich, dass dieser bei einer Polarisationsrichtung von $\p
 
 
 \subsection{Brechungsindex von Glas}
-Fällt Licht im Winkel $\alpha$ auf eine planparallele Glasplatte, beträgt die Phasenverschiebung $\Delta \gamma$ nach \cite{anleitung} für kleine Winkel $\alpha$
+Fällt Licht im Winkel $\delta$ auf eine planparallele Glasplatte, beträgt die Phasenverschiebung $\Delta \gamma$ nach \cite{anleitung} für kleine Winkel $\delta$
 \begin{equation} \label{eqn:Phasendifferenz}
-  \Delta \gamma = \frac{2 \pi}{\lambda_\text{vac.}} \, T \, \frac{n-1}{2n} \alpha^2 \, .
+  \Delta \gamma = \frac{2 \pi}{\lambda_\text{vac.}} \, T \, \frac{n-1}{2n} \delta^2 \, .
 \end{equation}
 Die Phasenverschiebung ist somit abhängig von der Wellenlänge $\lambda_\text{vac.}$ des Lichts im Vakuum, der Dicke $T$ der Glasplatte und dem Brechungsindex $n$ des Glases.
-Durch Veränderung des Winkels $\alpha$ können also Phasendifferenzen erzeugt werden, die zu Interferenzeffekten mit Licht führen, welches keine Glasplatte passiert hat.
-Aus der Anzahl $M = \sfrac{\Delta \gamma}{2 \pi}$ der Phasenverschiebungen um \SI{360}{\degree} bei Drehung der Glasplatte um den Winkel $\alpha$ kann nach Umstellen der Gleichung \eqref{eqn:Phasendifferenz} der Brechungsindex
+Durch Veränderung des Winkels $\delta$ können also Phasendifferenzen erzeugt werden, die zu Interferenzeffekten mit Licht führen, welches keine Glasplatte passiert hat.
+Aus der Anzahl $M = \sfrac{\Delta \gamma}{2 \pi}$ der Phasenverschiebungen um \SI{360}{\degree} bei Drehung der Glasplatte um den Winkel $\delta$ kann nach Umstellen der Gleichung \eqref{eqn:Phasendifferenz} der Brechungsindex
 \begin{equation}\label{eqn:n_Glas}
-  n = \left( 1 - \frac{2 M \lambda_\text{vac.}}{T \alpha^2} \right)^{-1}
+  n = \left( 1 - \frac{2 M \lambda_\text{vac.}}{T \delta^2} \right)^{-1}
 \end{equation}
 berechnet werden.
 

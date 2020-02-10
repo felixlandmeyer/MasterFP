@@ -76,7 +76,7 @@ Drücke = np.array([
         Miriam_n(df.dropna(subset=['Druck', 'M3'])["Druck"], df.dropna(subset=['Druck', 'M3'])["M3"])[1],
         Miriam_n(df.dropna(subset=['Druck', 'M4'])["Druck"], df.dropna(subset=['Druck', 'M4'])["M4"])[1],
         ])
-
+print(Drücke)
 
 n = np.array([
         Miriam_n(df.dropna(subset=['Druck', 'M1'])["Druck"], df.dropna(subset=['Druck', 'M1'])["M1"])[2],
@@ -98,12 +98,17 @@ print("Mean:", np.mean(n_atm_miriam))
 
 n_lit = 1.000277
 
-Abw =1 - n_lit/np.mean(n_atm_miriam)
+Abw = 1 - (n_lit-1)/(np.mean(n_atm_miriam)-1)
 
-print("Abweichung von Literaturwert:", Abw)
-
+print("Abweichung von Literaturwert in Prozent:", Abw*100)
 
 measure_list = [M1,M2,M3,M4]
+
+table = {"Druck": Druck, "M1": M1, "n1": n[0], "M2": M2, "n2": n[1], "M3": M3, "n3": n[2], "M4": M4, "n4": n[3]}
+with open('outputdata.tex', 'w') as tf:
+     tf.write(pd.DataFrame(table).to_latex(index=False,na_rep=""))
+
+
 labels = ["Messreihe 1", "Messreihe 2", "Messreihe 3", "Messreihe 4"]
 markers = ["+","*","1","x"]
 cmap = mpl.cm.get_cmap('viridis')
